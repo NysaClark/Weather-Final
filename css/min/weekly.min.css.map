@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../styles/weekly.scss"
+    ],
+    "names": [],
+    "file": "weekly.min.css"
+}

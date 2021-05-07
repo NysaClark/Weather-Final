@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../styles/index.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}
