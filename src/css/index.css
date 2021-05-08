@@ -19,4 +19,24 @@ body {
   background-size: cover;
   color: black;
 }
+
+.navbar-collapse {
+  -webkit-box-flex: .3;
+      -ms-flex-positive: .3;
+          flex-grow: .3;
+}
+
+.btn {
+  color: var(--darkBlue);
+}
+
+.btn:hover {
+  background-color: var(--darkBlue);
+  border: var(--darkBlue);
+  color: white;
+}
+
+.active {
+  border-bottom: var(--darkBlue) 1px solid;
+}
 /*# sourceMappingURL=index.css.map */
