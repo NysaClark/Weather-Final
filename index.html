@@ -24,17 +24,20 @@
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                 </svg> </span> 
             </button>
-            <div class="collapse navbar-collapse" id="navbarSuppportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item ms-3">
-                        <button type="button" aria-current="" class="btn active"> Today </button>
-                    </li>
-                    <li class="nav-item ms-3">
-                        <button type="button" aria-current="" class="btn"> Hourly </button>
-                    </li>
-                    <li class="nav-item ms-3">
-                        <button type="button" aria-current="" class="btn"> Weely </button>
-                    </li>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="navbarSuppportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <button type="button" aria-current="" class="hourly btn btn-primary"> Hourly </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" aria-current="" class="today btn btn-primary"> Today </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" aria-current="" class="weekly btn btn-primary"> Weekly </button>
+                        </li>
+                </div>
             </div>
         </div>
     </nav>
@@ -43,12 +46,22 @@
 
 
     <!-- header (daily) -->
-    <header class="daily masthead text-white">
+    <header class="daily masthead text-white mt-3 mb-3">
         <!-- tempurature, etc -->
         <div class="overlay"></div>
         <div class="container">
-            <div class="col-xl-9 mx-auto"><h1 class="mb-5">Temperature</h1></div>
-            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto"><h3 class="mb-2">Weather</h3></div>
+            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto">
+                <h3 class="location mb-10">Location</h3>
+            </div>
+            <div class="col-xl-9 mx-auto">
+                <h1 class="temperature mb-5">Temperature</h1>
+            </div>
+            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto">
+                <h3 class="weather mb-2">Weather</h3
+            ></div>
+        </div>
+        <div class="container">
+        <img src="https://publicdomainvectors.org/photos/nicubunu_Weather_Symbols_Sun.png" alt="sun">
         </div>
         <!-- weather details -->
         <div></div>
@@ -60,15 +73,21 @@
 
     <!-- Hourly -->
     <div class="hourly">
-        div
+        <div class="container">
+
+        </div>
     </div>
 
     <!-- Weekly -->
-    <div class="weekly"></div>
+    <div class="weekly">
+        <div class="container">
+
+        </div>
+    </div>
 
 
     <!-- footer -->
-        <footer class="footer fixed-bottom py-2 bg-light text-center"
+        <footer class="footer py-2 bg-light text-center"
         <a href="#" class="navbar-brand mb-0 h1">credits</a>
     </footer>
     <!-- footer -->
