@@ -22,6 +22,23 @@ body{
     color: black;
 }
 
+// Nav Bar Styles
+.navbar-collapse{
+    flex-grow: .3;
+}
+.btn{
+    color: var(--darkBlue);
+    &:hover{
+        background-color: var(--darkBlue);
+        border: var(--darkBlue);
+        color: white;
+    }
+}
+
+.active{
+    border-bottom: var(--darkBlue) 1px solid;
+}
+
 .masthead{
     padding-top: 8rem;
     padding-bottom: 8rem;
