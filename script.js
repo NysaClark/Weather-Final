@@ -23,13 +23,13 @@ $(function () {
 
 
         if (limit == 'sec') {
-            return hours + ':' + minutes + ':' + seconds;
+            return `${hours}:${minutes}:${seconds} ${meridies}`;
         } else if (limit == 'min') {
-            return hours + ':' + minutes;
+            return `${hours}:${minutes} ${meridies}`;
         } else if (limit == 'hour') {
             return hours;
         } else {
-            return hours + ':' + minutes + ':' + seconds + '.' + milliseconds;
+            return `${hours}:${minutes}:${seconds}.${milliseconds} ${meridies}`;
         }
     }
 
@@ -52,8 +52,13 @@ $(function () {
     function init(json) {
         let { lat, lon, current, daily, hourly, ...otherObj } = json
         console.log(current);
-        console.log(Time(current['sunrise']))
-        console.log(Time(current['sunset']))
-        console.log(Time(current['dt']))
+        // Today
+        if(true){
+            $(`.today > .container > .item >  #temperature`).text(`${current.temp} F`)
+            $(`.today > .container > .item >  #weather`).text(`${current['weather'][0]['main']}`)
+            $(`.today > .container > .item >  #feelsLike`).text(`${current.feels_like} F`)
+            $(`.today > .container > .item >  #humidity`).text(`${current.humidity}`)
+            
+        }
     }
 });
