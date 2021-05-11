@@ -62,6 +62,10 @@ $(function () {
             $(`.today > .container > .item >  #humidity`).text(`${current.humidity}`)
             $(`.today > .container > .item >  #uvi`).text(`${current.uvi}`)
             // $(`.today > .container > .item >  #precipitation`).text(``)
+        }
+
+        //Hourly
+        if(true){
             
         }
     }
