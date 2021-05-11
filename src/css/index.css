@@ -6,6 +6,7 @@
 }
 
 :root {
+  --navBackground: #f8f9fa;
   --darkBlue: #0f1a3d;
   --lightBlue: #89b0eb;
   --lightYellow: #fdeaa5;
@@ -36,6 +37,12 @@ body {
 
 .btn {
   color: var(--darkBlue);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.btn:last-child {
+  margin-right: 40px;
 }
 
 .btn:focus {
@@ -45,38 +52,15 @@ body {
 }
 
 .btn:hover, .btn.active {
-  background-color: var(--darkBlue);
-  border: var(--darkBlue);
+  background-color: var(--lightBlue);
+  border: var(--lightBlue);
   color: white;
   -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn.active {
-  background-color: var(--lightBlue);
-}
-
-.btn.dropdown {
-  margin-top: 10px;
-  background-color: #f8f9fa;
-}
-
-.btn.dropdown:focus {
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.btn.dropdown:hover, .btn.dropdown.active {
-  background-color: #f8f9fa;
-  border: #f8f9fa;
-  color: var(--darkBlue);
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.btn.dropdown.active {
-  font-weight: bold;
+  background-color: var(--darkBlue);
 }
 
 .navbar-toggler:focus {
@@ -88,5 +72,26 @@ body {
 .masthead {
   padding-top: 8rem;
   padding-bottom: 8rem;
+}
+
+@media only screen and (max-width: 974px) {
+  .btn {
+    background-color: var(--navBackground);
+  }
+  .btn:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .btn:hover, .btn.active {
+    background-color: var(--navBackground);
+    border: var(--navBackground);
+    color: var(--darkBlue);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .btn.active {
+    font-weight: bold;
+  }
 }
 /*# sourceMappingURL=index.css.map */

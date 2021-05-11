@@ -6,6 +6,7 @@
 }
 
 :root{
+    --navBackground: #f8f9fa;
     --darkBlue: #0f1a3d;
     --lightBlue: #89b0eb;
     --lightYellow: #fdeaa5;
@@ -36,43 +37,27 @@ body{
     }
 }
 
+
 .btn{
     color: var(--darkBlue);
-
+    margin-left: 10px;
+    margin-right: 10px;
+    &:last-child{
+        margin-right: 40px;
+    }
     &:focus {
         outline: none;
         box-shadow: none;
     }
 
     &:hover, &.active{
-        background-color: var(--darkBlue);
-        border: var(--darkBlue);
+        background-color: var(--lightBlue);
+        border: var(--lightBlue);
         color: white;
         box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
     }
     &.active{
-        background-color: var(--lightBlue);
-    }
-
-    
-    &.dropdown{
-        margin-top: 10px;
-        background-color: #f8f9fa;
-
-        &:focus {
-            outline: none;
-            box-shadow: none;
-        }
-
-        &:hover, &.active{
-            background-color: #f8f9fa;
-            border: #f8f9fa;
-            color: var(--darkBlue);
-            box-shadow: none;
-        }
-        &.active{
-            font-weight: bold;
-        }
+        background-color: var(--darkBlue);
     }
 }
 
@@ -86,4 +71,29 @@ body{
 .masthead{
     padding-top: 8rem;
     padding-bottom: 8rem;
+}
+
+
+@media only screen and (max-width: 974px){
+    // .navbar-toggler{
+    //     justify-self: end;
+    // }
+
+    .btn{
+        background-color: var(--navBackground);
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    
+        &:hover, &.active{
+            background-color: var(--navBackground);
+            border: var(--navBackground);
+            color: var(--darkBlue);
+            box-shadow: none;
+        }
+        &.active{
+            font-weight: bold;
+        }
+    }
 }
