@@ -6,6 +6,7 @@
 }
 
 :root {
+  --navBackground: #f8f9fa;
   --darkBlue: #0f1a3d;
   --lightBlue: #89b0eb;
   --lightYellow: #fdeaa5;
@@ -20,23 +21,77 @@ body {
   color: black;
 }
 
-.navbar-collapse {
-  -webkit-box-flex: .3;
-      -ms-flex-positive: .3;
-          flex-grow: .3;
+.navbar-brand {
+  color: var(--darkBlue);
+  text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+  color: var(--darkBlue);
+}
+
+.navbar-brand img {
+  width: 80px;
+  margin-right: 15px;
 }
 
 .btn {
   color: var(--darkBlue);
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.btn:hover {
-  background-color: var(--darkBlue);
-  border: var(--darkBlue);
+.btn:last-child {
+  margin-right: 40px;
+}
+
+.btn:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn:hover, .btn.active {
+  background-color: var(--lightBlue);
+  border: var(--lightBlue);
   color: white;
+  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
 }
 
-.active {
-  border-bottom: var(--darkBlue) 1px solid;
+.btn.active {
+  background-color: var(--darkBlue);
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.masthead {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+@media only screen and (max-width: 974px) {
+  .btn {
+    background-color: var(--navBackground);
+  }
+  .btn:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .btn:hover, .btn.active {
+    background-color: var(--navBackground);
+    border: var(--navBackground);
+    color: var(--darkBlue);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .btn.active {
+    font-weight: bold;
+  }
 }
 /*# sourceMappingURL=index.css.map */

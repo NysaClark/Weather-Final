@@ -18,7 +18,7 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg py-3 bg-light doNotRemove">
         <div class="container-fluid">
-            <a href="index.html" class="navbar-brand mb-0 h1"> <img src="images/earth.png" width="10%">Fairweather</a>
+            <a href="index.html" class="navbar-brand mb-0 h1"> <img src="images/earth.png">Fairweather</a>
             <button class="navbar-toggler" type="button" data-bs-toggle='collapse'
                 data-bs-target="#navbarSuppportedContent" aria-expanded='false' aria-label="Toggle Navigation">
                 <span class='navbar-toggler-icon'> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -32,17 +32,15 @@
             <div class="collapse navbar-collapse" id="navbarSuppportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <button type="button" aria-current="" class="btn btn-primary" id="today"> Today </button>
+                        <button type="button" aria-current="" class="btn active" id="today"> Today </button>
                     </li>
                     <li class="nav-item">
-                        <button type="button" aria-current="" class="btn btn-primary" id="hourly"> Hourly </button>
+                        <button type="button" aria-current="" class="btn" id="hourly"> Hourly </button>
                     </li>
                     <li class="nav-item">
-                        <button type="button" aria-current="" class="btn btn-primary" id="weekly"> Weekly </button>
+                        <button type="button" aria-current="" class="btn" id="weekly"> Weekly </button>
                     </li>
             </div>
-        </div>
-        </div>
         </div>
     </nav>
     <!--Navbar-->
@@ -72,20 +70,20 @@
             <h1 class="col-md-14 col-lg-12 col-xl-9 mx-auto" id="day">Today</h1>
 
             <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
-                <h3 class="mb-10">Feels Like</h3>
-                <h1 class="severity" id="feelsLike">Tempurature</h1>
+                <h3>Feels Like</h3>
+                <h1 id="feelsLike">Temperature</h2>
             </div>
             <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
-                <h3 class="mb-10">Humidity</h3>
-                <h1 class="mb-10 severity" id="humidity">number%</h1>
+                <h3>Humidity</h3>
+                <h1 id="humidity">number%</h1>
             </div>
             <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
-                <h3 class="mb-10" id="uvi">UV Index</h3>
-                <h1 class="mb-10" id="uvi">UV Index</h1>
+                <h3 >UV Index</h3>
+                <h1 id="uvi">High, med, or low</h1>
             </div>
             <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
-                <h3 class="mb-10" id="precipitation">Precipitation</h3>
-                <h1 class="mb-10" id="uvi">number%</h1>
+                <h3>Precipitation</h3>
+                <h1 id="precipitation">number%</h1>
             </div>
         </div>
     </header>
@@ -305,8 +303,56 @@
 
     <!-- Weekly -->
     <div class="weekly mt-4 mb-4">
-        <div class="container">
-
+        <div class="container col-md-7 col-sm-7">
+            <div id="day6">
+                <h4>Saturday</h4>
+                <img src="#" alt="svg">
+                <h1>Temp</h1>
+                <div id="maxTemp">max</div>
+                <div id="minTemp">min</div>
+            </div>
+            <div id="day1">
+                <h4>Monday</h4>
+                <img src="#" alt="svg">
+                <h1>Temp</h1>
+                <div id="maxTemp">max</div>
+                <div id="minTemp">min</div>
+            </div>
+            <div id="day2">
+                <h4>Tuesday</h4>
+                <img src="#" alt="svg">
+                <h1>Temp</h1>
+                <div id="maxTemp">max</div>
+                <div id="minTemp">min</div>
+            </div>
+            <div id="day3">
+                <h4>Wednesday</h4>
+                <img src="#" alt="svg">
+                <h1>Temp</h1>
+                <div id="maxTemp">max</div>
+                <div id="minTemp">min</div>
+            </div>
+            <div id="day4">
+                <h4>Thursday</h4>
+                <img src="#" alt="svg">
+                <h1>Temp</h1>
+                <div id="maxTemp">max</div>
+                <div id="minTemp">min</div>
+            </div>
+            <div id="day5">
+                <h4>Friday</h4>
+                <img src="#" alt="svg">
+                <h1>Temp</h1>
+                <div id="maxTemp">max</div>
+                <div id="minTemp">min</div>
+            </div>
+            <div id="day7">
+                <h4>Sunday</h4>
+                <img src="#" alt="svg">
+                <h1>Temp</h1>
+                <div id="maxTemp">max</div>
+                <div id="minTemp">min</div>
+            </div>
         </div>
     </div>
 

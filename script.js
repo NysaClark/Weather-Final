@@ -58,6 +58,8 @@ $(function () {
             $(`.today > .container > .item >  #weather`).text(`${current['weather'][0]['main']}`)
             $(`.today > .container > .item >  #feelsLike`).text(`${current.feels_like} F`)
             $(`.today > .container > .item >  #humidity`).text(`${current.humidity}`)
+            $(`.today > .container > .item >  #uvi`).text(`${current.uvi}`)
+            // $(`.today > .container > .item >  #precipitation`).text(``)
             
         }
     }
