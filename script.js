@@ -53,7 +53,7 @@ $(function () {
 
     function init(json) {
         let { lat, lon, current, daily, hourly, ...otherObj } = json
-        console.log(current);
+        console.log(hourly);
         // Today
         if(true){
             $(`.today > .container > .item >  #temperature`).text(`${current.temp} F`)
