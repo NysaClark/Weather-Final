@@ -23,20 +23,68 @@ body{
 }
 
 // Nav Bar Styles
-.navbar-collapse{
-    flex-grow: .3;
-}
-.btn{
+.navbar-brand{
     color: var(--darkBlue);
+    text-transform: uppercase;
+    // font-family: ;
     &:hover{
-        background-color: var(--darkBlue);
-        border: var(--darkBlue);
-        color: white;
+        color: var(--darkBlue);
+    }
+    img{
+        width: 80px;
+        margin-right: 15px;
     }
 }
 
-.active{
-    border-bottom: var(--darkBlue) 1px solid;
+.navbar-collapse{
+    flex-grow: .1;
+}
+
+.btn{
+    color: var(--darkBlue);
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    &:hover, &.active{
+        background-color: var(--darkBlue);
+        border: var(--darkBlue);
+        color: white;
+        box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
+    }
+    &.active{
+        background-color: var(--lightBlue);
+    }
+
+    
+    &.dropdown{
+        margin-top: 10px;
+        background-color: #f8f9fa;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        &:hover, &.active{
+            background-color: #f8f9fa;
+            border: #f8f9fa;
+            color: var(--darkBlue);
+            box-shadow: none;
+        }
+        &.active{
+            font-weight: bold;
+        }
+    }
+}
+
+.navbar-toggler{
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
 }
 
 .masthead{
