@@ -34,12 +34,6 @@ body {
   margin-right: 15px;
 }
 
-.navbar-collapse {
-  -webkit-box-flex: .1;
-      -ms-flex-positive: .1;
-          flex-grow: .1;
-}
-
 .btn {
   color: var(--darkBlue);
 }
