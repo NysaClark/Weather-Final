@@ -6,10 +6,21 @@ $(function () {
             seconds = Math.floor((time / 1000) % 60),
             minutes = Math.floor((time / (1000 * 60)) % 60),
             hours = Math.floor((time / (1000 * 60 * 60)) % 24);
+            meridies = 'am'
 
         hours = (hours < 10) ? "0" + hours : hours;
         minutes = (minutes < 10) ? "0" + minutes : minutes;
         seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+        if(hours / 24 > 1){
+            hours = hours % 24;
+        }
+        if(hours / 12 > 1){
+            hours = hours % 12;
+            meridies = 'pm'
+        }
+
+
 
         if (limit == 'sec') {
             return hours + ':' + minutes + ':' + seconds;
