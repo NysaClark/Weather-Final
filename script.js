@@ -29,7 +29,10 @@ $(function () {
     function change() {
         let id = this.id
         $(`body > :not(.${id}):not(.doNotRemove)`).hide();
+        $(`.${id}`).show()
     }
+
+    $(`body > :not(.today):not(.doNotRemove)`).hide();
 
     fetch('./weather.json')
         .then(response => response.json())
