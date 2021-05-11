@@ -41,6 +41,8 @@ $(function () {
         let id = this.id
         $(`body > :not(.${id}):not(.doNotRemove)`).hide();
         $(`.${id}`).show()
+        $('.active').removeClass('active')
+        $(this).addClass('active')
     }
 
     $(`body > :not(.today):not(.doNotRemove)`).hide();
