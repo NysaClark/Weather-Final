@@ -23,10 +23,12 @@ $(function () {
     }
 
     $( "#hourly" ).click(change)
+    $( "#today" ).click(change)
+    $( "#weekly" ).click(change)
 
     function change() {
         let id = this.id
-        console.log(id);
+        $(`body > :not(.${id}):not(.doNotRemove)`).hide();
     }
 
     fetch('./weather.json')
