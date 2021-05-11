@@ -11,14 +11,18 @@
     <link rel="icon" type="image/png" href="./images/earth.png">
     <link rel="stylesheet" href="./src/css/index.css">
 
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> 
 
 <body>
 
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg py-3 bg-light doNotRemove">
+    <nav class="navbar navbar-expand-md py-3 bg-light doNotRemove">
         <div class="container-fluid">
-            <a href="index.html" class="navbar-brand mb-0 h1"> <img src="images/earth.png">Fairweather</a>
+            <div class="navbar-brand mb-0 h1">
+                <img src="images/earth.png">
+                <p>Fairweather</p>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle='collapse'
                 data-bs-target="#navbarSuppportedContent" aria-expanded='false' aria-label="Toggle Navigation">
                 <span class='navbar-toggler-icon'> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -52,13 +56,13 @@
         <!-- tempurature, etc -->
         <div class="overlay"></div>
         <div class="container">
-            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto">
-                <h3 class="mb-10" id="location">Location</h3>
+            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
+                <h3 class="mb-10" id="location">Phoenix, Arizona</h3>
             </div>
-            <div class="col-xl-9 mx-auto">
+            <div class="col-xl-9 mx-auto item">
                 <h1 class="mb-5" id="temperature">Temperature</h1>
             </div>
-            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto">
+            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
                 <h3 class="mb-2" id="weather">Weather</h3>
             </div>
         </div>
@@ -69,19 +73,19 @@
         <div class="container mt-5">
             <h1 class="col-md-14 col-lg-12 col-xl-9 mx-auto" id="day">Today</h1>
 
-            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto">
+            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
                 <h3>Feels Like</h3>
-                <h1 class="feelsLike">Temperature</h2>
+                <h1 id="feelsLike">Temperature</h2>
             </div>
-            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto">
+            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
                 <h3>Humidity</h3>
                 <h1 id="humidity">number%</h1>
             </div>
-            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto">
+            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
                 <h3 >UV Index</h3>
                 <h1 id="uvi">High, med, or low</h1>
             </div>
-            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto">
+            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
                 <h3>Precipitation</h3>
                 <h1 id="precipitation">number%</h1>
             </div>
