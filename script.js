@@ -78,11 +78,10 @@ $(function () {
         // Weekly
         if (true) {
             for (let i = 0; i < 7; i++) {
-                $(`.weekly > .container > #day${i + 1} > .weather`).text(`${hourly[i]['weather'][0]['main']}`)
-                $(`.weekly > .container > #day${i + 1} > .temp`).text(`${hourly[i]['temp']} F`)
-                $(`.weekly > .container > #day${i + 1} > div > .humidity`).text(`${hourly[i]['humidity']}`)
-                $(`.weekly > .container > #day${i + 1} > div > .uvi`).text(`${hourly[i]['uvi']}`)
-                $(`.weekly > .container > #day${i + 1} > div > .pressure`).text(`${hourly[i]['pressure']}`)
+                $(`.weekly > .container > #day${i + 1} > .weather`).text(`${daily[i]['weather'][0]['main']}`)
+                $(`.weekly > .container > #day${i + 1} > .temp`).text(`${daily[i]['temp']['day']} F`)
+                $(`.weekly > .container > #day${i + 1} > .maxTemp`).text(`${daily[i]['temp']['max']} F`)
+                $(`.weekly > .container > #day${i + 1} > .minTemp`).text(`${daily[i]['temp']['min']} F`)
             }
         }
     }
