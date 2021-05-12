@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Fairweather</title>
+    <link rel="icon" type="image/png" href="./images/earth.png">
+    <link rel="stylesheet" href="./src/css/index.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md py-3 bg-light doNotRemove">
+        <div class="container-fluid">
+            <div class="navbar-brand mb-0 h1">
+                <img src="images/earth.png">
+                <p>Fairweather</p>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle='collapse'
+                data-bs-target="#navbarSuppportedContent" aria-expanded='false' aria-label="Toggle Navigation">
+                <span class='navbar-toggler-icon'> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg> </span>
+            </button>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="navbarSuppportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <button type="button" aria-current="" class="btn active" id="today"> Today </button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" aria-current="" class="btn" id="hourly"> Hourly </button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" aria-current="" class="btn" id="weekly"> Weekly </button>
+                    </li>
+            </div>
+        </div>
+    </nav>
+    <!--Navbar-->
+
+
+
+    <!-- header (daily) -->
+    <header class="masthead text-white mt-4 mb-4 today">
+        <!-- tempurature, etc -->
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
+                <h3 class="mb-10" id="location">Phoenix, Arizona</h3>
+            </div>
+            <div class="col-xl-9 mx-auto item">
+                <h1 class="mb-5" id="temperature">Temperature</h1>
+            </div>
+            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
+                <h3 class="mb-2" id="weather">Weather</h3>
+            </div>
+        </div>
+        <div class="container">
+            <img src="images/sun.png" alt="sun">
+        </div>
+        <!-- weather details -->
+        <div class="container mt-5">
+            <h1 class="col-md-14 col-lg-12 col-xl-9 mx-auto" id="day">Today</h1>
+
+            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
+                <h3>Feels Like</h3>
+                <h1 id="feelsLike">Temperature</h2>
+            </div>
+            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
+                <h3>Humidity</h3>
+                <h1 id="humidity">number%</h1>
+            </div>
+            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
+                <h3 >UV Index</h3>
+                <h1 id="uvi">High, med, or low</h1>
+            </div>
+            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
+                <h3>Precipitation</h3>
+                <h1 id="precipitation">number%</h1>
+            </div>
+        </div>
+    </header>
+    <!-- header -->
+
+
+
+    <!-- Hourly -->
+    <div class="hourly mt-4 mb-4">
+        <div class="container">
+            <div class="card" id="1">
+                <h2>1 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="2">
+                <h2>2 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="3">
+                <h2>3 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="4">
+                <h2>4 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="5">
+                <h2>5 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="6">
+                <h2>6 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="7">
+                <h2>7 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="8">
+                <h2>8 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="9">
+                <h2>9 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="10">
+                <h2>10 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="11">
+                <h2>11 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="12">
+                <h2>12 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="13">
+                <h2>1 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="13">
+                <h2>2 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="14">
+                <h2>3 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="15">
+                <h2>4 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="16">
+                <h2>5 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="17">
+                <h2>6 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="18">
+                <h2>7 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="19">
+                <h2>8 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="20">
+                <h2>9 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="21">
+                <h2>10 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="22">
+                <h2>11 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+            <div class="card" id="23">
+                <h2>12 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div>Humidity:<h5 class="humidity"> percent%</h5></div>
+                <div>UV Index:<h5 class="uvi">#</h5></div>
+                <div>Pressure:<h5 class="pressure">percent%</h5></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Weekly -->
+    <div class="weekly mt-4 mb-4">
+        <div class="container">
+            <div class="card col-md-7" id="day1">
+                <h4>Sunday</h4>
+                <img src="#" alt="svg" class="svg">
+                <h4 class="weath">weather</h4>
+                <h1 class="temp">Temp</h1>
+                <div>max:<div class="maxTemp">max</div></div>
+                <div>min:<div class="minTemp">min</div></div>
+            </div>
+            <div class="card col-md-7" id="day2">
+                <h4>Monday</h4>
+                <img src="#" alt="svg" class="svg">
+                <h4 class="weath">weather</h4>
+                <h1 class="temp">Temp</h1>
+                <div>max:<div class="maxTemp">max</div></div>
+                <div>min:<div class="minTemp">min</div></div>
+            </div>
+            <div class="card col-md-7" id="day3">
+                <h4>Tuesday</h4>
+                <img src="#" alt="svg" class="svg">
+                <h4 class="weath">weather</h4>
+                <h1 class="temp">Temp</h1>
+                <div>max:<div class="maxTemp">max</div></div>
+                <div>min:<div class="minTemp">min</div></div>
+            </div>
+            <div class="card col-md-7" id="day4">
+                <h4>Wednesday</h4>
+                <img src="#" alt="svg" class="svg">
+                <h4 class="weath">weather</h4>
+                <h1 class="temp">Temp</h1>
+                <div>max:<div class="maxTemp">max</div></div>
+                <div>min:<div class="minTemp">min</div></div>
+            </div>
+            <div class="card col-md-7" id="day5">
+                <h4>Thursday</h4>
+                <img src="#" alt="svg" class="svg">
+                <h4 class="weath">weather</h4>
+                <h1 class="temp">Temp</h1>
+                <div>max:<div class="maxTemp">max</div></div>
+                <div>min:<div class="minTemp">min</div></div>
+            </div>
+            <div class="card col-md-7" id="day6">
+                <h4>Friday</h4>
+                <img src="#" alt="svg" class="svg">
+                <h4 class="weath">weather</h4>
+                <h1 class="temp">Temp</h1>
+                <div>max:<div class="maxTemp">max</div></div>
+                <div>min:<div class="minTemp">min</div></div>
+            </div>
+            <div class="card col-md-7" id="day7">
+                <h4>Saturday</h4>
+                <img src="#" alt="svg" class="svg">
+                <h4 class="weath">weather</h4>
+                <h1 class="temp">Temp</h1>
+                <div>max:<div class="maxTemp">max</div></div>
+                <div>min:<div class="minTemp">min</div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer class="footer py-2 bg-light text-center doNotRemove">
+        <p class="navbar-brand mb-0 h1">&copy; Copyright Fairweather 2021</p>
+    </footer>
+    <!-- footer -->
+
+
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <!-- scripts -->
+</body>
+
+</html>
