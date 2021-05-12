@@ -81,11 +81,6 @@ body {
           box-shadow: none;
 }
 
-.masthead {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-
 footer .navbar-brand {
   color: var(--darkBlue);
   font-size: 1.1rem;
@@ -119,5 +114,42 @@ footer .navbar-brand {
   .navbar-brand p {
     display: none;
   }
+}
+
+.masthead {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.today {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.today .genDetails {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.today .icon {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.today .icon img {
+  max-width: 140px;
+}
+
+.today .moreDetails {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
 }
 /*# sourceMappingURL=index.css.map */
