@@ -79,7 +79,7 @@ $(function () {
         // Weekly
         if (true) {
             for (let i = 0; i < 7; i++) {
-                $(`.weekly > .container > #day${i + 1} > .weather`).text(`${daily[i]['weather'][0]['main']}`)
+                $(`.weekly > .container > #day${i + 1} > .weath`).text(`${daily[i]['weather'][0]['main']}`)
                 $(`.weekly > .container > #day${i + 1} > .temp`).text(`${daily[i]['temp']['day']} F`)
                 $(`.weekly > .container > #day${i + 1} > div > .maxTemp`).text(`${daily[i]['temp']['max']} F`)
                 $(`.weekly > .container > #day${i + 1} > div > .minTemp`).text(`${daily[i]['temp']['min']} F`)
