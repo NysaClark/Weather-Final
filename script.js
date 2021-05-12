@@ -66,7 +66,10 @@ $(function () {
 
         //Hourly
         if(true){
-            
+            for(let i = 0; i < 24; i++){
+                console.log(`${hourly[i]['weather'][0]['main']}`);
+                $(`.hourly > .container > #${i + 1} > #weather`).text(`${hourly[i]['weather'][0]['main']}`)
+            }
         }
     }
 });
