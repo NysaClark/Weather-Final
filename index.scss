@@ -118,31 +118,61 @@ footer{
 
 // General Page Styles
 .masthead{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
 }
 
 // Today Styles
 .today{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: space-evenly;
-    .genDetails{
-        grid-column-start: 1;
-        grid-column-end: 3;
+    .container{
+        color: var(--darkBlue);
+        border-radius: 6px;
+        padding: 20px 20px;
+        max-width: 1080px;
 
-        // display: flex;
-        // flex-direction: column;
-    }
-    .icon{
-        grid-column-start: 3;
-        grid-column-end: 4;
-        img{
-            max-width: 140px;
+        &.genDetails{
+            display: grid;
+            grid-template-columns: auto auto;
+
+            .locat{
+                grid-column-start: 1;
+                grid-column-end: 2;
+
+                grid-row-start: 1;
+                grid-row-end: 2; 
+            }
+            .time{
+                grid-column-start: 1;
+                grid-column-end: 2;
+
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+            .temp{
+                grid-column-start: 1;
+                grid-column-end: 2;
+
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+            .weath{
+                grid-column-start: 1;
+                grid-column-end: 2;
+
+                grid-row-start: 4;
+                grid-row-end: 5;
+            }
+            .icon{
+                grid-column-start: 2;
+                grid-column-end: 3;
+
+                grid-row-start: 1;
+                grid-row-end: 5;
+
+                img{
+                    max-width: 240px;
+                }
+            }
         }
-    }
-    .moreDetails{
-        grid-column-start: 1;
-        grid-column-end: 4;
     }
 }
