@@ -13,7 +13,7 @@
     --orangeYellow: #f3c05a;
 }
 
-// General Styles
+// Body Styles
 body{
     // background-image: linear-gradient(#6684AD 9%,#ADC7EB);
     background-image: linear-gradient(#5484AD 9%,#93C7EB);
@@ -42,7 +42,7 @@ body{
     }
 }
 
-
+// Nav Bar Button Styles
 .btn{
     color: var(--darkBlue);
     margin-left: 10px;
@@ -73,11 +73,7 @@ body{
     }
 }
 
-.masthead{
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-}
-
+// Footer Styles
 footer{
     .navbar-brand{
         color: var(--darkBlue);
@@ -85,7 +81,7 @@ footer{
     }
 }
 
-
+// Media Rules for Navbar
 @media only screen and (max-width: 768px){
 
     .btn{
@@ -116,5 +112,37 @@ footer{
         p{
             display: none;
         }
+    }
+}
+
+
+// General Page Styles
+.masthead{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+// Today Styles
+.today{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
+    .genDetails{
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        // display: flex;
+        // flex-direction: column;
+    }
+    .icon{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        img{
+            max-width: 140px;
+        }
+    }
+    .moreDetails{
+        grid-column-start: 1;
+        grid-column-end: 4;
     }
 }
