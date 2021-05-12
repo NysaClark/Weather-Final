@@ -53,14 +53,15 @@ $(function () {
 
     function init(json) {
         let { lat, lon, current, daily, hourly, ...otherObj } = json
-        console.log(daily);
+        console.log(current);
         // Today
         if (true) {
-            $(`.today > .container > .item >  #temperature`).text(`${current.temp} F`)
-            $(`.today > .container > .item >  #weather`).text(`${current['weather'][0]['main']}`)
-            $(`.today > .container > .item >  #feelsLike`).text(`${current.feels_like} F`)
-            $(`.today > .container > .item >  #humidity`).text(`${current.humidity}`)
-            $(`.today > .container > .item >  #uvi`).text(`${current.uvi}`)
+            $(`.today > .container > .item >  #temperature`).text(`${current.temp} F`);
+            $(`.today > .container > .item >  #weather`).text(`${current['weather'][0]['main']}`);
+            $(`.today > .container > .item >  #time`).text(`${Time(current.dt)}`);
+            $(`.today > .moreDetails > .item >  .feelsLike`).text(`${current.feels_like} F`);
+            $(`.today > .moreDetails > .item >  .humidity`).text(`${current.humidity}`);
+            $(`.today > .moreDetails > .item >  .uvi`).text(`${current.uvi}`);
             // $(`.today > .container > .item >  #precipitation`).text(``)
         }
 
