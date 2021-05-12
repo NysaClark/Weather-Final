@@ -53,8 +53,9 @@
 
 
     <!-- header (daily) -->
-    <div class="masthead text-white mt-4 mb-4 today container">
+    <header class="masthead text-white mt-4 mb-4 today">
         <!-- tempurature, etc -->
+        <div class="overlay"></div>
         <div class="container">
             <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
                 <h3 class="mb-10" id="location">Phoenix, Arizona</h3>
@@ -66,11 +67,11 @@
                 <h3 class="mb-2" id="weather">Weather</h3>
             </div>
         </div>
-        <div class="icon">
+        <div class="container">
             <img src="images/sun.png" alt="sun">
         </div>
         <!-- weather details -->
-        <div class="moreDetails mt-5">
+        <div class="container mt-5">
             <h1 class="col-md-14 col-lg-12 col-xl-9 mx-auto" id="day">Today</h1>
 
             <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
@@ -82,7 +83,7 @@
                 <h1 id="humidity">number%</h1>
             </div>
             <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
-                <h3>UV Index</h3>
+                <h3 >UV Index</h3>
                 <h1 id="uvi">High, med, or low</h1>
             </div>
             <div class="col-md-14 col-lg-12 col-xl-9 mx-auto item">
@@ -90,13 +91,13 @@
                 <h1 id="precipitation">number%</h1>
             </div>
         </div>
-    </div>
+    </header>
     <!-- header -->
 
 
 
     <!-- Hourly -->
-    <div class="masthead hourly mt-4 mb-4">
+    <div class="hourly mt-4 mb-4">
         <div class="container">
             <div class="card" id="1">
                 <h2>1 AM</h2>
