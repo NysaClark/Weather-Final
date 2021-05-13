@@ -124,22 +124,38 @@ footer{
 
 // Today Styles
 .today{
+    font-family: 'Raleway', sans-serif;
     .container{
         color: var(--darkBlue);
         border-radius: 6px;
         padding: 20px 20px;
-        max-width: 1080px;
+        max-width: 900px;
 
         &.genDetails{
             display: grid;
             grid-template-columns: auto auto;
+            align-content: center;
+            
+            .item{
+                padding-left: 15%; 
+                h1, h2, h4, h5{
+                    margin-bottom: 0;
+                }
+            }
 
             .locat{
                 grid-column-start: 1;
                 grid-column-end: 2;
 
                 grid-row-start: 1;
-                grid-row-end: 2; 
+                grid-row-end: 2;
+
+                align-self: center;
+                
+                #location{
+                    font-weight: 700;
+                }
+                
             }
             .time{
                 grid-column-start: 1;
@@ -147,6 +163,13 @@ footer{
 
                 grid-row-start: 2;
                 grid-row-end: 3;
+
+                align-self: center;
+                margin-bottom: 12px;
+                #time{
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                }
             }
             .temp{
                 grid-column-start: 1;
@@ -154,6 +177,12 @@ footer{
 
                 grid-row-start: 3;
                 grid-row-end: 4;
+
+                align-self: center;
+
+                #temperature{
+                    font-weight: 700;
+                }
             }
             .weath{
                 grid-column-start: 1;
@@ -161,6 +190,12 @@ footer{
 
                 grid-row-start: 4;
                 grid-row-end: 5;
+
+                align-self: center;
+
+                #weather{
+                    font-weight: 700;
+                }
             }
             .icon{
                 grid-column-start: 2;
@@ -169,8 +204,67 @@ footer{
                 grid-row-start: 1;
                 grid-row-end: 5;
 
+                align-self: center;
+
+                padding-right: 15%; 
+                justify-self: end;
+
                 img{
-                    max-width: 240px;
+                    max-width: 200px;
+                    padding: 4%;
+                }
+            }
+        }
+    }
+}
+
+// Media Rules for Today Page
+@media only screen and (max-width: 768px) {
+    .today{
+        .container{
+            &.genDetails{
+                .item{ 
+                    h1, h2, h4, h5{
+                        font-size: 1.5rem;
+                    }
+                    #location, #temperature{
+                        font-weight: 600;
+                    }
+                    #time, #weather{
+                        font-weight: 500;
+                    }
+                }
+                .icon{
+                    padding-right: 0%;
+                    justify-self: center;
+                    img{
+                        max-width: 120px;
+                        padding: 4%;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 445px){
+    .today{
+        .container{
+            &.genDetails{
+                padding: 20px 5px;
+                .item{ 
+                    h4{
+                        font-size: 1.2rem;
+                    }
+                    h1, h2{
+                        font-size: 1.3rem;
+                    }
+                }
+                .icon{
+                    img{
+                        padding-right: 10%;
+                    }
                 }
             }
         }
