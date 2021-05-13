@@ -235,6 +235,14 @@ footer .navbar-brand {
   padding: 4%;
 }
 
+.today .container.moreDetails .item {
+  padding-left: 8%;
+}
+
+.today .container.moreDetails .item h1, .today .container.moreDetails .item h2, .today .container.moreDetails .item h4, .today .container.moreDetails .item h5 {
+  margin-bottom: 0;
+}
+
 @media only screen and (max-width: 768px) {
   .today .container.genDetails .item h1, .today .container.genDetails .item h2, .today .container.genDetails .item h4, .today .container.genDetails .item h5 {
     font-size: 1.5rem;

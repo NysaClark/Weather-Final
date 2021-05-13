@@ -131,6 +131,7 @@ footer{
         padding: 20px 20px;
         max-width: 900px;
 
+        // Top Div Styles (general details)
         &.genDetails{
             display: grid;
             grid-template-columns: auto auto;
@@ -212,6 +213,16 @@ footer{
                 img{
                     max-width: 200px;
                     padding: 4%;
+                }
+            }
+        }
+
+        //Bottom Div Styles (more details)
+        &.moreDetails{
+            .item{
+                padding-left: 8%;
+                h1, h2, h4, h5{
+                    margin-bottom: 0;
                 }
             }
         }
