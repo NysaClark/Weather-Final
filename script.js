@@ -20,8 +20,6 @@ $(function () {
             meridies = 'pm'
         }
 
-
-
         if (limit == 'sec') {
             return `${hours}:${minutes}:${seconds} ${meridies}`;
         } else if (limit == 'min') {
@@ -31,6 +29,23 @@ $(function () {
         } else {
             return `${hours}:${minutes}:${seconds}.${milliseconds} ${meridies}`;
         }
+    }
+
+    function uvIndex (uv) {
+        let output = ''
+        if(uv < 3){
+            output = 'Low'
+        } else if (uv < 6){
+            output = 'Moderate'
+        } else if (uv < 8){
+            output = 'High'
+        } else if (uv < 11){
+            output = 'Very High'
+        } else {
+            output = 'Extreme'
+        }
+
+        return(output)
     }
 
     $("#hourly").click(change)
@@ -60,8 +75,8 @@ $(function () {
             $(`.today > .container > .item >  #weather`).text(`${current['weather'][0]['main']}`);
             $(`.today > .container > .item >  #time`).text(`${Time(current.dt)}`);
             $(`.today > .container > .item >  .feelsLike`).text(`${current.feels_like} F`);
-            $(`.today > .container > .item >  .humidity`).text(`${current.humidity}`);
-            $(`.today > .container > .item >  .uvi`).text(`${current.uvi}`);
+            $(`.today > .container > .item >  .humidity`).text(`${current.humidity}%`);
+            $(`.today > .container > .item >  .uvi`).text(`${uvIndex(current.uvi)} (${current.uvi})`);
             // $(`.today > .container > .item >  #precipitation`).text(``)
         }
 
@@ -70,8 +85,8 @@ $(function () {
             for (let i = 0; i < 24; i++) {
                 $(`.hourly > .container > #${i + 1} > .weather`).text(`${hourly[i]['weather'][0]['main']}`)
                 $(`.hourly > .container > #${i + 1} > .temp`).text(`${hourly[i]['temp']} F`)
-                $(`.hourly > .container > #${i + 1} > div > .humidity`).text(`${hourly[i]['humidity']}`)
-                $(`.hourly > .container > #${i + 1} > div > .uvi`).text(`${hourly[i]['uvi']}`)
+                $(`.hourly > .container > #${i + 1} > div > .humidity`).text(`${hourly[i]['humidity']}%`)
+                $(`.hourly > .container > #${i + 1} > div > .uvi`).text(`${uvIndex(hourly[i]['uvi'])} (${hourly[i]['uvi']})`)
                 $(`.hourly > .container > #${i + 1} > div > .pressure`).text(`${hourly[i]['pressure']}`)
             }
         }
