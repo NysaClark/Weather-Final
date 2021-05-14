@@ -282,3 +282,40 @@ footer{
         }
     }
 }
+
+
+
+// Week Styles
+.weekly{
+    font-family: 'Raleway', sans-serif;
+    .container{
+        display: flex;
+        flex-direction: row;
+        grid-gap: .25%;
+        justify-content: center;
+        //padding-right: 2%;
+        //padding-left: 2%;
+        //height: 30rem;
+        img{
+            width: 80%;
+            height: 180%;
+        }
+        .card{
+            padding-top: 8%;
+            padding-bottom: 8%;
+            align-items: center;
+            width: 17%;
+        }
+    }
+}
+
+@media only screen and (min-width: 767px){
+    .weekly{
+        .container{
+            flex-direction: column;
+        }
+        .card{
+            width: 50%
+        }
+    }
+}

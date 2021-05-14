@@ -279,4 +279,48 @@ footer .navbar-brand {
     padding-right: 10%;
   }
 }
+
+.weekly {
+  font-family: 'Raleway', sans-serif;
+}
+
+.weekly .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  grid-gap: .25%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.weekly .container img {
+  width: 80%;
+  height: 180%;
+}
+
+.weekly .container .card {
+  padding-top: 8%;
+  padding-bottom: 8%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 17%;
+}
+
+@media only screen and (min-width: 767px) {
+  .weekly .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .weekly .card {
+    width: 50%;
+  }
+}
 /*# sourceMappingURL=index.css.map */
