@@ -109,13 +109,6 @@ footer .navbar-brand {
   .navbar-nav {
     margin-top: .9rem;
   }
-  footer {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-  }
 }
 
 @media only screen and (max-width: 415px) {
