@@ -109,6 +109,13 @@ footer .navbar-brand {
   .navbar-nav {
     margin-top: .9rem;
   }
+  footer {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+  }
 }
 
 @media only screen and (max-width: 415px) {
@@ -236,15 +243,33 @@ footer .navbar-brand {
   padding: 4%;
 }
 
+.today .container.moreDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.today .container.moreDetails h1 {
+  font-weight: 600;
+}
+
 .today .container.moreDetails .item {
   padding-left: 8%;
 }
 
-.today .container.moreDetails .item h1, .today .container.moreDetails .item h2, .today .container.moreDetails .item h4, .today .container.moreDetails .item h5 {
+.today .container.moreDetails .item h1, .today .container.moreDetails .item h3 {
   margin-bottom: 0;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 768px) {
+  .today .container {
+    min-height: 230px;
+  }
   .today .container.genDetails .item h1, .today .container.genDetails .item h2, .today .container.genDetails .item h4, .today .container.genDetails .item h5 {
     font-size: 1.5rem;
   }
@@ -262,6 +287,12 @@ footer .navbar-brand {
   .today .container.genDetails .icon img {
     max-width: 120px;
     padding: 4%;
+  }
+  .today .container.moreDetails h1 {
+    font-size: 1.5rem;
+  }
+  .today .container.moreDetails .item h1, .today .container.moreDetails .item h3 {
+    font-size: 1.5rem;
   }
 }
 
