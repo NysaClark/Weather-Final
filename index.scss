@@ -289,33 +289,55 @@ footer{
 .weekly{
     font-family: 'Raleway', sans-serif;
     .container{
+        #day{
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+        .weath{
+            font-weight: normal;
+        }
         display: flex;
         flex-direction: row;
-        grid-gap: .25%;
+        grid-gap: .5%;
         justify-content: center;
-        //padding-right: 2%;
-        //padding-left: 2%;
-        //height: 30rem;
-        img{
-            width: 80%;
-            height: 180%;
-        }
+        width: 84%;
+        margin: 0 auto;
+        
         .card{
             padding-top: 8%;
             padding-bottom: 8%;
             align-items: center;
-            width: 17%;
+            width: 15%;
+            margin: 5px;
+            img{
+                width: 80%;
+            }
         }
     }
 }
 
-@media only screen and (min-width: 767px){
+@media only screen and (max-width: 768px){
     .weekly{
         .container{
+            #day{
+                font-size: 2em;
+            }
             flex-direction: column;
+            justify-content: center;
+            //align-content: center;
+            width: 80%;
+            margin: 0 auto;
+            .card{
+                width: fit-content;
+            }
         }
-        .card{
-            width: 50%
+    }
+}
+
+@media only screen and (max-width: 445px){
+    .weekly{
+        .container{
+
         }
     }
 }

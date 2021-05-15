@@ -292,15 +292,21 @@ footer .navbar-brand {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  grid-gap: .25%;
+  grid-gap: .5%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 84%;
+  margin: 0 auto;
 }
 
-.weekly .container img {
-  width: 80%;
-  height: 180%;
+.weekly .container #day {
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+.weekly .container .weath {
+  font-weight: normal;
 }
 
 .weekly .container .card {
@@ -309,18 +315,33 @@ footer .navbar-brand {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 17%;
+  width: 15%;
+  margin: 5px;
 }
 
-@media only screen and (min-width: 767px) {
+.weekly .container .card img {
+  width: 80%;
+}
+
+@media only screen and (max-width: 768px) {
   .weekly .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 80%;
+    margin: 0 auto;
   }
-  .weekly .card {
-    width: 50%;
+  .weekly .container #day {
+    font-size: 2em;
+  }
+  .weekly .container .card {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 /*# sourceMappingURL=index.css.map */
