@@ -111,6 +111,13 @@ footer{
     .navbar-nav{
         margin-top: .9rem;
     }
+
+    footer{
+        // position: sticky;
+        // bottom: 0;
+        // left: 0;
+        // width: 100vw;
+    }
 }
 
 @media only screen and (max-width: 415px){
@@ -225,10 +232,16 @@ footer{
 
         //Bottom Div Styles (more details)
         &.moreDetails{
+            display: flex;
+            flex-direction: column;
+            h1{
+                font-weight: 600;  
+            }
             .item{
                 padding-left: 8%;
-                h1, h2, h4, h5{
+                h1, h3{
                     margin-bottom: 0;
+                    font-weight: 600;
                 }
             }
         }
@@ -244,6 +257,7 @@ footer{
     }
     .today{
         .container{
+            min-height: 230px;
             &.genDetails{
                 .item{ 
                     h1, h2, h4, h5{
@@ -263,6 +277,17 @@ footer{
                         max-width: 120px;
                         padding: 4%;
                         
+                    }
+                }
+            }
+
+            &.moreDetails{
+                h1{
+                    font-size: 1.5rem;
+                }
+                .item{ 
+                    h1, h3{
+                        font-size: 1.5rem;
                     }
                 }
             }
