@@ -22,6 +22,9 @@ body {
 }
 
 .navbar-brand {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,6 +82,12 @@ body {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 footer .navbar-brand {
@@ -245,6 +254,12 @@ footer .navbar-brand {
 }
 
 @media only screen and (max-width: 768px) {
+  footer {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+  }
   .today .container.genDetails .item h1, .today .container.genDetails .item h2, .today .container.genDetails .item h4, .today .container.genDetails .item h5 {
     font-size: 1.5rem;
   }
@@ -284,7 +299,7 @@ footer .navbar-brand {
   font-family: 'Raleway', sans-serif;
 }
 
-.weekly .container {
+.weekly .contain {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -293,55 +308,52 @@ footer .navbar-brand {
       -ms-flex-direction: row;
           flex-direction: row;
   grid-gap: .5%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 84%;
   margin: 0 auto;
 }
 
-.weekly .container #day {
+.weekly .contain #day {
   font-weight: bold;
   font-size: 0.95em;
 }
 
-.weekly .container .weath {
+.weekly .contain .weath {
   font-weight: normal;
 }
 
-.weekly .container .card {
+.weekly .contain .card {
   padding-top: 8%;
   padding-bottom: 8%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 15%;
-  margin: 5px;
+  width: 13.5%;
 }
 
-.weekly .container .card img {
+.weekly .contain .card img {
   width: 80%;
 }
 
 @media only screen and (max-width: 768px) {
-  .weekly .container {
+  .weekly .contain {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 80%;
-    margin: 0 auto;
+    width: 60%;
+    margin: auto;
   }
-  .weekly .container #day {
-    font-size: 2em;
+  .weekly .contain #day {
+    font-size: 0.95em;
   }
-  .weekly .container .card {
+  .weekly .contain .card {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    margin: 10px auto;
   }
 }
 /*# sourceMappingURL=index.css.map */
