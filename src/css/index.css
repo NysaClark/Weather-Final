@@ -85,9 +85,9 @@ body {
 }
 
 footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer .navbar-brand {
@@ -269,16 +269,8 @@ footer .navbar-brand {
 }
 
 @media only screen and (max-width: 768px) {
-<<<<<<< HEAD
-  footer {
-    position: -webkit-sticky;
-    position: sticky;
-    width: 100%;
-    bottom: 0;
-=======
   .today .container {
     min-height: 230px;
->>>>>>> e97515cad566eeabbb696edf9db21c8ed00767e3
   }
   .today .container.genDetails .item h1, .today .container.genDetails .item h2, .today .container.genDetails .item h4, .today .container.genDetails .item h5 {
     font-size: 1.5rem;
