@@ -85,7 +85,7 @@ body {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   width: 100%;
   bottom: 0;
 }
@@ -140,6 +140,7 @@ footer .navbar-brand {
   border-radius: 6px;
   padding: 20px 20px;
   max-width: 900px;
+  width: 90%;
 }
 
 .today .container.genDetails {
@@ -269,16 +270,13 @@ footer .navbar-brand {
 }
 
 @media only screen and (max-width: 768px) {
-<<<<<<< HEAD
-  footer {
-    position: -webkit-sticky;
-    position: sticky;
-    width: 100%;
-    bottom: 0;
-=======
+  /*footer{
+        position: sticky;
+        width: 100%;
+        bottom: 0;
+    }*/
   .today .container {
     min-height: 230px;
->>>>>>> e97515cad566eeabbb696edf9db21c8ed00767e3
   }
   .today .container.genDetails .item h1, .today .container.genDetails .item h2, .today .container.genDetails .item h4, .today .container.genDetails .item h5 {
     font-size: 1.5rem;
@@ -321,6 +319,27 @@ footer .navbar-brand {
   }
 }
 
+@media only screen and (max-width: 240px) {
+  .today .container.genDetails {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  .today .container.genDetails .icon {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 3;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 5;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-right: 15%;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+}
+
 .weekly {
   font-family: 'Raleway', sans-serif;
 }
@@ -337,7 +356,7 @@ footer .navbar-brand {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 84%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -369,7 +388,7 @@ footer .navbar-brand {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 60%;
+    width: 80%;
     margin: auto;
   }
   .weekly .contain #day {
@@ -380,6 +399,9 @@ footer .navbar-brand {
     width: -moz-fit-content;
     width: fit-content;
     margin: 10px auto;
+  }
+  .weekly .contain .card img {
+    width: 60%;
   }
 }
 /*# sourceMappingURL=index.css.map */
