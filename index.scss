@@ -8,9 +8,9 @@
 :root{
     --navBackground: #f8f9fa;
     --darkBlue: #0f1a3d;
-    --lightBlue: #89b0eb;
+    --lightBlue: #6990ca;
     --lightYellow: #fdeaa5;
-    --orangeYellow: #f3c05a;
+    --orangeYellow: #eba63f;
 }
 
 // Body Styles
@@ -80,11 +80,16 @@ footer{
     position: fixed;
     width: 100%;
     bottom: 0;
-    .navbar-brand{
+    .h1{
         color: var(--darkBlue);
         font-size: 1.1rem;
     }
+    a{
+        text-decoration: none;
+        color: var(--lightBlue);
+    }
 }
+
 
 // Media Rules for Navbar
 @media only screen and (max-width: 768px){
@@ -112,7 +117,6 @@ footer{
         margin-top: .9rem;
     }
 }
-
 @media only screen and (max-width: 415px){
     .navbar-brand{
         p{
@@ -121,11 +125,21 @@ footer{
     }
 }
 
+//Media Rules for Footer
+@media only screen and (max-width: 260px){
+    footer{
+        .h1{
+            font-size: 100%;
+        }
+            font-size: 80%;
+    }
+}
+
 
 // General Page Styles
 .masthead{
     padding-top: 1.4rem;
-    padding-bottom: 1.4rem;
+    padding-bottom: 5rem;
 }
 
 // Today Styles
@@ -162,6 +176,7 @@ footer{
                 
                 #location{
                     font-weight: 700;
+                    color: var(--lightBlue);
                 }
                 
             }
@@ -176,7 +191,7 @@ footer{
                 margin-bottom: 12px;
                 #time{
                     font-size: 1.4rem;
-                    font-weight: 700;
+                    font-weight: 500;
                 }
             }
             .temp{
@@ -189,7 +204,8 @@ footer{
                 align-self: center;
 
                 #temperature{
-                    font-weight: 700;
+                    color: var(--orangeYellow);
+                    font-weight: 800;
                 }
             }
             .weath{
@@ -202,7 +218,7 @@ footer{
                 align-self: center;
 
                 #weather{
-                    font-weight: 700;
+                    font-weight: 500;
                 }
             }
             .icon{
@@ -229,13 +245,19 @@ footer{
             display: flex;
             flex-direction: column;
             h1{
-                font-weight: 600;  
+                font-weight: 600;
+                color: var(--orangeYellow);
+            }
+            #day{
+                margin-bottom: 3%;
+                color: var(--lightBlue);
             }
             .item{
                 padding-left: 8%;
-                h1, h3{
+                margin-bottom: 2%;  
+                h3{
                     margin-bottom: 0;
-                    font-weight: 600;
+                    font-weight: 500;
                 }
             }
         }
@@ -317,17 +339,60 @@ footer{
         .container{
             &.genDetails {
                 grid-template-columns: auto;
+                text-align: center;
+                .locat{
+                    align-self: center;
+                    margin-bottom: 10px;               
+                }
+                .time{
+                    align-self: center;
+                    margin-bottom: 15px;
+                    #time{
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                    }
+                }
                 .icon{
-                    grid-column-start: 2;
-                    grid-column-end: 3;
+                    grid-column-start: 1;
+                    grid-column-end: 8;
     
-                    grid-row-start: 1;
+                    grid-row-start: 3;
+                    grid-row-end: 3;
+                    
+                    margin-bottom: 15px;
+
+                    align-self: center;
+ 
+                    justify-self: start;
+                }
+                .temp{
+                    grid-row-start: 4;
                     grid-row-end: 5;
     
                     align-self: center;
-    
-                    padding-right: 15%; 
-                    justify-self: end;
+                    margin-bottom: 10px;
+                    #temperature{
+                        font-weight: 700;
+                    }
+                }
+                .weath{  
+                    grid-row-start: 5;
+                    grid-row-end: 6;
+                    
+                    #weather{
+                        font-weight: 500;
+                    }
+                }
+            }
+            &.moreDetails{
+                text-align: center;
+                padding-left: 2%;
+                .item{
+                    padding-left: 8%;
+                    h3{
+                        margin-bottom: 0;
+                        font-weight: 560;
+                    }
                 }
             }
         }
@@ -337,11 +402,17 @@ footer{
 
 // Week Styles
 .weekly{
+    padding-bottom: 4rem;
     font-family: 'Raleway', sans-serif;
     .contain{
         #day{
             font-weight: bold;
             font-size: 0.95em;
+            color: var(--lightBlue);
+        }
+        .temp{
+            font-weight: 700;
+            color: var(--orangeYellow);
         }
         .weath{
             font-weight: normal;
@@ -358,14 +429,27 @@ footer{
             padding-bottom: 8%;
             align-items: center;
             width: 13.5%;
-            //margin: 5px;
+            div{
+                font-weight: 500;
+                .maxTemp{
+                    color: var(--orangeYellow);
+                    font-weight: 800
+                }
+                .minTemp{
+                    color: var(--orangeYellow);
+                    font-weight: 800
+                }
+            }
             img{
                 width: 80%;
+                margin-top: 5%;
+                margin-bottom: 5%;
             }
         }
     }
 }
 
+//Media Rules for Weekly
 @media only screen and (max-width: 768px){
     .weekly{
         .contain{
@@ -382,14 +466,6 @@ footer{
                     width: 60%;
                 }
             }
-        }
-    }
-}
-
-@media only screen and (max-width: 445px){
-    .weekly{
-        .container{
-
         }
     }
 }
