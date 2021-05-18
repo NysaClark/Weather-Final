@@ -84,7 +84,7 @@ $(function () {
         if (true) {
             for (let i = 0; i < 24; i++) {
                 $(`.hourly > .contain > #${i + 1} > .weather`).text(`${hourly[i]['weather'][0]['main']}`)
-                $(`.hourly > .contain > #${i + 1} > .temp`).text(`${hourly[i]['temp']} F`)
+                $(`.hourly > .contain > #${i + 1} > .temp`).text(`${Math.round(hourly[i]['temp'])} F`)
                 $(`.hourly > .contain > #${i + 1} > div > .humidity`).text(`${hourly[i]['humidity']}%`)
                 $(`.hourly > .contain > #${i + 1} > div > .uvi`).text(`${uvIndex(hourly[i]['uvi'])} (${hourly[i]['uvi']})`)
                 $(`.hourly > .contain > #${i + 1} > div > .pressure`).text(`${hourly[i]['pressure']}`)
@@ -95,9 +95,9 @@ $(function () {
         if (true) {
             for (let i = 0; i < 7; i++) {
                 $(`.weekly > .contain > #day${i + 1} > .weath`).text(`${daily[i]['weather'][0]['main']}`)
-                $(`.weekly > .contain > #day${i + 1} > .temp`).text(`${daily[i]['temp']['day']} F`)
-                $(`.weekly > .contain > #day${i + 1} > div > .maxTemp`).text(`${daily[i]['temp']['max']} F`)
-                $(`.weekly > .contain > #day${i + 1} > div > .minTemp`).text(`${daily[i]['temp']['min']} F`)
+                $(`.weekly > .contain > #day${i + 1} > .temp`).text(`${Math.round(daily[i]['temp']['day'])} F`)
+                $(`.weekly > .contain > #day${i + 1} > div > .maxTemp`).text(`${Math.round(daily[i]['temp']['max'])} F`)
+                $(`.weekly > .contain > #day${i + 1} > div > .minTemp`).text(`${Math.round(daily[i]['temp']['min'])} F`)
             }
         }
     }

@@ -383,7 +383,7 @@ footer .navbar-brand {
 }
 
 .weekly .contain .card #day {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.2rem;
 }
 
@@ -440,7 +440,7 @@ footer .navbar-brand {
   -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
   border: var(--darkBlue) 1 solid;
-  margin: 3px;
+  margin: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -510,7 +510,7 @@ footer .navbar-brand {
   }
 }
 
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 670px) {
   .hourly .contain {
     width: 100%;
     padding: 1.5%;
@@ -534,6 +534,7 @@ footer .navbar-brand {
     text-align: center;
     row-gap: 15%;
     padding: 5%;
+    padding-bottom: 8.5%;
   }
   .hourly .contain .card .time {
     -ms-grid-column: 1;

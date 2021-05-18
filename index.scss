@@ -353,7 +353,7 @@ footer{
         
         .card{
             #day{
-                font-weight: bold;
+                font-weight: 600;
                 font-size: 1.2rem;
             }
             padding: 2% 3% 2% 3%;
@@ -415,7 +415,7 @@ footer{
         .card{
             box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
             border: var(--darkBlue) 1 solid;
-            margin: 3px;
+            margin: 5px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -478,7 +478,7 @@ footer{
     }
 }
 
-@media only screen and (max-width: 665px){
+@media only screen and (max-width: 670px){
     .hourly{
         .contain{
             width: 100%;
@@ -507,6 +507,7 @@ footer{
                 text-align: center;
                 row-gap: 15%;
                 padding: 5%;
+                padding-bottom: 8.5%;
 
                 .time{
                     grid-column-start: 1;
