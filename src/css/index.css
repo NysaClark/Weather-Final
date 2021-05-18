@@ -18,7 +18,6 @@ body {
   background-image: linear-gradient(#5484AD 9%, #93C7EB);
   background-attachment: fixed;
   background-size: cover;
-  color: black;
 }
 
 .mb-5 {
@@ -348,6 +347,8 @@ footer .navbar-brand {
 }
 
 .weekly .contain {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,13 +360,8 @@ footer .navbar-brand {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 90%;
+  width: 98%;
   margin: 0 auto;
-}
-
-.weekly .contain #day {
-  font-weight: bold;
-  font-size: 0.95em;
 }
 
 .weekly .contain .weath {
@@ -373,8 +369,7 @@ footer .navbar-brand {
 }
 
 .weekly .contain .card {
-  padding-top: 8%;
-  padding-bottom: 8%;
+  padding: 2% 3% 2% 3%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -384,10 +379,18 @@ footer .navbar-brand {
   width: 13.5%;
   -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.weekly .contain .card #day {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .weekly .contain .card img {
-  width: 80%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 70%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -400,6 +403,7 @@ footer .navbar-brand {
     margin: auto;
   }
   .weekly .contain #day {
+    margin-top: .5rem;
     font-size: 0.95em;
   }
   .weekly .contain .card {
@@ -408,17 +412,23 @@ footer .navbar-brand {
     width: fit-content;
     margin: 10px auto;
   }
+  .weekly .contain .card :last-child {
+    margin-bottom: .2rem;
+  }
+  .weekly .contain .card div {
+    font-size: 1.2rem;
+  }
   .weekly .contain .card img {
+    margin-top: 4%;
+    margin-bottom: 4%;
     width: 60%;
   }
 }
 
 .hourly {
   font-family: 'Raleway', sans-serif;
-}
-
-.hourly h1, .hourly h2, .hourly h5 {
-  margin: 0;
+  color: var(--darkBlue) h1, h2, h5;
+  color-margin: 0;
 }
 
 .hourly .contain {
@@ -500,7 +510,7 @@ footer .navbar-brand {
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 665px) {
   .hourly .contain {
     width: 100%;
     padding: 1.5%;
@@ -514,6 +524,46 @@ footer .navbar-brand {
   }
   .hourly .contain .card div h1, .hourly .contain .card div h2, .hourly .contain .card div h5 {
     margin: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hourly .contain .card {
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+    row-gap: 15%;
+    padding: 5%;
+  }
+  .hourly .contain .card .time {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .hourly .contain .card .weather {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .hourly .contain .card .temp {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .hourly .contain .card .hum {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .hourly .contain .card div.uvi {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .hourly .contain .card .press {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+    grid-column-end: 4;
   }
 }
 /*# sourceMappingURL=index.css.map */

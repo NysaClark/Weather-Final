@@ -10,7 +10,7 @@
 |    Name  |   Task               |
 | :----:   | :----:               |
 | Alisson  | Bootstrap            |
-| Sean     | JS & React           |
+| Sean     | JS                   |
 | Nysa     | Styling              |
 | Sam      | README               |
 
