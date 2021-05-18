@@ -419,8 +419,6 @@ footer a {
 }
 
 .weekly .contain {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,7 +434,6 @@ footer a {
   margin: 0 auto;
 }
 
-<<<<<<< HEAD
 .weekly .contain #day {
   font-weight: bold;
   font-size: 0.95em;
@@ -448,8 +445,6 @@ footer a {
   color: var(--orangeYellow);
 }
 
-=======
->>>>>>> fe39dceac67f3bfa7dc493bdf4a76cfd934cc07f
 .weekly .contain .weath {
   font-weight: normal;
 }
@@ -488,15 +483,9 @@ footer a {
 }
 
 .weekly .contain .card img {
-<<<<<<< HEAD
   width: 80%;
   margin-top: 5%;
   margin-bottom: 5%;
-=======
-  margin-top: 2%;
-  margin-bottom: 2%;
-  width: 70%;
->>>>>>> fe39dceac67f3bfa7dc493bdf4a76cfd934cc07f
 }
 
 @media only screen and (max-width: 768px) {
@@ -580,6 +569,11 @@ footer a {
 
 .hourly .contain .card h1 {
   font-size: calc(1.375rem + .9vw);
+  color: var(--orangeYellow);
+}
+
+.hourly .contain .card h2 {
+  color: var(--lightBlue);
 }
 
 .hourly .contain .card h5 {
