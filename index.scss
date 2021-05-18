@@ -20,7 +20,11 @@ body{
     background-attachment: fixed;
     background-size: cover;
     
-    color: black;
+    // color: black;
+}
+
+.mb-5{
+    margin-bottom: 4rem !important;
 }
 
 // Nav Bar Styles
@@ -157,6 +161,7 @@ footer{
             display: grid;
             grid-template-columns: auto auto;
             align-content: center;
+            box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
             
             .item{
                 padding-left: 15%; 
@@ -242,6 +247,7 @@ footer{
 
         //Bottom Div Styles (more details)
         &.moreDetails{
+            box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
             display: flex;
             flex-direction: column;
             h1{
@@ -266,11 +272,6 @@ footer{
 
 // Media Rules for Today Page
 @media only screen and (max-width: 768px) {
-    /*footer{
-        position: sticky;
-        width: 100%;
-        bottom: 0;
-    }*/
     .today{
         .container{
             min-height: 230px;
@@ -400,7 +401,7 @@ footer{
 }
 
 
-// Week Styles
+// Weekly Styles
 .weekly{
     padding-bottom: 4rem;
     font-family: 'Raleway', sans-serif;
@@ -421,14 +422,20 @@ footer{
         flex-direction: row;
         grid-gap: .5%;
         justify-content: space-between;
-        width: 90%;
+        width: 98%;
         margin: 0 auto;
         
         .card{
-            padding-top: 8%;
-            padding-bottom: 8%;
+            #day{
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+            padding: 2% 3% 2% 3%;
             align-items: center;
+            justify-content: center;
             width: 13.5%;
+            box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
+            text-align: center;
             div{
                 font-weight: 500;
                 .maxTemp{
@@ -449,11 +456,12 @@ footer{
     }
 }
 
-//Media Rules for Weekly
+// Media Rules for Weekly Page
 @media only screen and (max-width: 768px){
     .weekly{
         .contain{
             #day{
+                margin-top: .5rem;
                 font-size: 0.95em;
             }
             flex-direction: column;
@@ -462,8 +470,152 @@ footer{
             .card{
                 width: fit-content;
                 margin: 10px auto;
+                :last-child{
+                    margin-bottom: .2rem;
+                }
+                div{
+                    font-size: 1.2rem;
+                }
                 img{
+                    margin-top: 4%;
+                    margin-bottom: 4%;
                     width: 60%;
+                }
+            }
+        }
+    }
+}
+
+
+// Hourly Styles
+.hourly{
+    font-family: 'Raleway', sans-serif;
+    color: var(--darkBlue)
+    h1, h2, h5{
+        margin: 0;
+    }
+    .contain{
+        width: 70%;
+        margin: auto;
+        .card{
+            box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
+            border: var(--darkBlue) 1 solid;
+            margin: 3px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3%;
+            flex-wrap: wrap;
+
+            h1, h2, h5{
+                font-weight: 600;
+                margin: 2%;
+            }
+            div{
+                margin: 2%;
+                h1, h2, h5{
+                    margin: 0;
+                }
+            }
+
+            h1{
+                font-size: calc(1.375rem + .9vw);
+                // color: var(--orangeYellow);
+            }
+            h5{
+                font-size: 1.3rem;
+            }
+
+            div{
+                min-width: 75px;
+                text-align: center;
+                h5{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1140px){
+    .hourly{
+        .contain{
+            width: 85%;
+            .card{
+                padding: 2%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 870px){
+    .hourly{
+        .contain{
+            width: 95%;
+            .card{
+                padding: 1.6%;
+                h1, h2, h5{
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 665px){
+    .hourly{
+        .contain{
+            width: 100%;
+            padding: 1.5%;
+            .card{
+                h1, h2, h5{
+                    font-size: .9rem;
+                    margin: 1%;
+                }
+                div{
+                    margin: 1%;
+                    h1, h2, h5{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .hourly{
+        .contain{
+            .card{
+                display: grid;
+                text-align: center;
+                row-gap: 15%;
+                padding: 5%;
+
+                .time{
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                }
+                .weather{
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                }
+                .temp{
+                    grid-column-start: 3;
+                    grid-column-end: 4;
+                }
+                .hum{
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                }
+                div.uvi{
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                }
+                .press{
+                    grid-column-start: 3;
+                    grid-column-end: 4;
                 }
             }
         }
