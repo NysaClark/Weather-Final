@@ -54,7 +54,9 @@ When the landing page is done start styling of it
 - style and add icons AC
 
 #### README file SD
+
 _________________________________________________________________________
+
 ## Daliy Log
 
 #### Day 1 5/5
@@ -88,6 +90,3 @@ Nysa:
 Sam:
 
 _________________________________________________________________________
-
-
-
