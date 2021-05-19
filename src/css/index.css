@@ -484,6 +484,9 @@ footer a {
 }
 
 @media only screen and (max-width: 768px) {
+  .weekly {
+    margin-bottom: 4rem !important;
+  }
   .weekly .contain {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
