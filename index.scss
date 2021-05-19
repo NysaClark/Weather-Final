@@ -455,6 +455,7 @@ footer{
 // Media Rules for Weekly Page
 @media only screen and (max-width: 768px){
     .weekly{
+        margin-bottom: 4rem !important;
         .contain{
             flex-direction: column;
             width: 80%;

@@ -19,6 +19,41 @@
 >
 
 #### What will the JS file do?
+> The JavaScript will be used to grab the needed information from the JSON file and add it to the HTML in a style that is easy to understand
+
+_________________________________________________________________________
+
+## To-Do List
+
+### Overview:
+1. Map out the landing page, hourly page and weekly page for both mobile and desktop
+2. React
+Start with landing page then move on to hourly and weekly
+When the landing page is done start styling of it
+3. Get info from json file and put it onto page
+4. Style content
+5. Write README file
+
+### Pages:
+#### Landing Page
+- start with navbar and footer AC
+- make logo NC
+- make nav bar buttons AC
+- content for the main current weather section (ex: sunny, temp, location , & icon) SZ
+- content for the other current weather section (ex: humidity, wind, feels like, etc…) SZ
+- styling & icons NC
+
+#### Hourly Page
+- divs for every hour AC
+- div content SZ
+- style and add icons NC
+
+#### Weekly Page
+- divs for every day AC
+- div content SZ
+- style and add icons AC
+
+#### README file SD
 
 _________________________________________________________________________
 
@@ -55,6 +90,3 @@ Nysa:
 Sam:
 
 _________________________________________________________________________
-
-
-
