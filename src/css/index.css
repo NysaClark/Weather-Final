@@ -16,7 +16,6 @@
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(9%, #5484ad), to(#93c7eb));
   background-image: linear-gradient(#5484ad 9%, #93c7eb);
   background-attachment: fixed;
   background-size: cover;
@@ -461,13 +460,8 @@ footer a {
 .weekly {
   padding-bottom: 0;
   font-family: "Raleway", sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .weekly .fill {
@@ -480,14 +474,9 @@ footer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   grid-gap: 0.5%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 98%;
   margin: 0 auto;
 }
@@ -561,13 +550,8 @@ footer a {
     margin-bottom: 4rem !important;
   }
   .weekly .contain {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     width: 90%;
     min-height: 70vh;
     margin: auto;
@@ -576,19 +560,10 @@ footer a {
   .weekly .contain .card {
     padding: 20px;
     margin: 5px auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-evenly;
     min-width: 100%;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
     width: fit-content;
   }
   .weekly .contain .card #day {
@@ -602,16 +577,9 @@ footer a {
     font-size: 1.2rem;
   }
   .weekly .contain .card div#high, .weekly .contain .card div#low {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    align-items: center;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .weekly .contain .card img {
     margin-top: 4%;
@@ -627,9 +595,7 @@ footer a {
     display: none;
   }
   .weekly .contain .card svg {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     display: block;
     fill: #eba63f;
   }
