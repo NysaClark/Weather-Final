@@ -777,7 +777,7 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 675px) {
   .hourly .contain {
     width: 100%;
     padding: 1.5%;
@@ -790,6 +790,9 @@ footer a {
   }
   .hourly .contain .card div {
     margin: 1%;
+  }
+  .hourly .contain .card div.press {
+    margin: 0;
   }
   .hourly .contain .card div h1,
   .hourly .contain .card div h2,

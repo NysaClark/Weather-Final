@@ -708,7 +708,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 675px) {
     .hourly {
         .contain {
             width: 100%;
@@ -722,6 +722,9 @@ footer {
                 }
                 div {
                     margin: 1%;
+                    &.press{
+                        margin: 0;
+                    }
                     h1,
                     h2,
                     h5 {
