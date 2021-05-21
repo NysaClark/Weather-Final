@@ -133,11 +133,6 @@ Sean: Fixed the footer and css
 Nysa: Added Todolist and changed formatting of weekly
 Sam: Read.me
 
-
-
-
-
-
 _______________________________________________________________
 
 
