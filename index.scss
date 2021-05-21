@@ -447,7 +447,6 @@ footer {
     font-family: "Raleway", sans-serif;
     display: flex;
     flex-direction: column;
-    height: 73vh;
     .fill {
         flex: 1 1 auto;
     }
@@ -494,7 +493,20 @@ footer {
                 margin-top: 5%;
                 margin-bottom: 5%;
             }
+            p {
+                margin: 0;
+                padding: 0;
+            }
+            svg {
+                display: none;
+            }
         }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .weekly {
+        height: 73vh;
     }
 }
 
@@ -502,36 +514,104 @@ footer {
 @media only screen and (max-width: 768px) {
     .weekly {
         margin-bottom: 4rem !important;
-        height: fit-content;
         .contain {
             flex-direction: column;
-            min-height: 100vh;
-            width: 80%;
+            align-items: center;
+            width: 90%;
+            min-height: 70vh;
             margin: auto;
+            height: 100%;
             .card {
+                padding: 20px;
+                margin: 5px auto;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
                 min-width: 100%;
                 #day {
-                    margin-top: 0.5rem;
+                    margin-top: 0;
                     font-size: 1.5rem;
                 }
                 img {
                     display: none;
                 }
                 width: fit-content;
-                margin: 10px auto;
-                :last-child {
-                    margin-bottom: 0.2rem;
-                }
                 div {
                     font-size: 1.2rem;
+                    &#high,
+                    &#low {
+                        align-items: center;
+                        display: flex;
+                        flex-direction: column;
+                    }
                 }
                 img {
                     margin-top: 4%;
                     margin-bottom: 4%;
                     width: 60%;
+                }
+                h1,
+                h4 {
+                    margin: 0;
+                    padding: 0;
+                }
+                p {
+                    display: none;
+                }
+                svg {
+                    justify-content: center;
+                    display: block;
+                    fill: #eba63f;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .weekly {
+        .contain {
+            .card {
+                #day {
+                    font-size: 1.2rem;
+                }
+                h1 {
+                    font-size: 1.3rem;
+                    padding-right: 5px;
+                }
+                h4 {
+                    font-size: 1rem;
+                    padding-right: 5px;
+                }
+                div {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .weekly {
+        .contain {
+            .card {
+                padding: 20px 10px;
+                #day {
+                    font-size: .9rem;
+                    &.wed{
+                        font-size: .8rem;
+                    }
+                }
+                h1 {
+                    font-size: 1rem;
+                    padding-right: 5px;
+                }
+                h4 {
+                    font-size: .8rem;
+                    padding-right: 5px;
+                }
+                div {
+                    font-size: 0.5rem;
                 }
             }
         }
@@ -628,7 +708,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 675px) {
     .hourly {
         .contain {
             width: 100%;
@@ -642,6 +722,9 @@ footer {
                 }
                 div {
                     margin: 1%;
+                    &.press{
+                        margin: 0;
+                    }
                     h1,
                     h2,
                     h5 {

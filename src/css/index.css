@@ -15,6 +15,10 @@
 }
 
 body {
+<<<<<<< HEAD
+=======
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(9%, #5484ad), to(#93c7eb));
+>>>>>>> a14c83e10cc18d493e27f225b0ea7116391817da
   background-image: linear-gradient(#5484ad 9%, #93c7eb);
   background-attachment: fixed;
   background-size: cover;
@@ -396,9 +400,19 @@ footer a {
 .weekly {
   padding-bottom: 0;
   font-family: "Raleway", sans-serif;
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   height: 73vh;
+=======
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+>>>>>>> a14c83e10cc18d493e27f225b0ea7116391817da
 }
 
 .weekly .fill {
@@ -407,9 +421,20 @@ footer a {
 
 .weekly .contain {
   display: flex;
+<<<<<<< HEAD
   flex-direction: row;
   grid-gap: 0.5%;
   justify-content: space-between;
+=======
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  grid-gap: 0.5%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+>>>>>>> a14c83e10cc18d493e27f225b0ea7116391817da
   width: 98%;
   margin: 0 auto;
 }
@@ -458,42 +483,160 @@ footer a {
   margin-bottom: 5%;
 }
 
+.weekly .contain .card p {
+  margin: 0;
+  padding: 0;
+}
+
+.weekly .contain .card svg {
+  display: none;
+}
+
+@media only screen and (min-width: 769px) {
+  .weekly {
+    height: 73vh;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .weekly {
     margin-bottom: 4rem !important;
     height: fit-content;
   }
   .weekly .contain {
+<<<<<<< HEAD
     flex-direction: column;
     min-height: 100vh;
     width: 80%;
+=======
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
+    min-height: 70vh;
+>>>>>>> a14c83e10cc18d493e27f225b0ea7116391817da
     margin: auto;
+    height: 100%;
   }
   .weekly .contain .card {
+<<<<<<< HEAD
+=======
+    padding: 20px;
+    margin: 5px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+>>>>>>> a14c83e10cc18d493e27f225b0ea7116391817da
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     min-width: 100%;
+<<<<<<< HEAD
+=======
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+>>>>>>> a14c83e10cc18d493e27f225b0ea7116391817da
     width: fit-content;
-    margin: 10px auto;
   }
   .weekly .contain .card #day {
+<<<<<<< HEAD
     margin-top: 0.5rem;
+=======
+    margin-top: 0;
+>>>>>>> a14c83e10cc18d493e27f225b0ea7116391817da
     font-size: 1.5rem;
   }
   .weekly .contain .card img {
     display: none;
   }
+<<<<<<< HEAD
   .weekly .contain .card :last-child {
     margin-bottom: 0.2rem;
   }
+=======
+>>>>>>> a14c83e10cc18d493e27f225b0ea7116391817da
   .weekly .contain .card div {
     font-size: 1.2rem;
+  }
+  .weekly .contain .card div#high, .weekly .contain .card div#low {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .weekly .contain .card img {
     margin-top: 4%;
     margin-bottom: 4%;
     width: 60%;
+  }
+  .weekly .contain .card h1,
+  .weekly .contain .card h4 {
+    margin: 0;
+    padding: 0;
+  }
+  .weekly .contain .card p {
+    display: none;
+  }
+  .weekly .contain .card svg {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: block;
+    fill: #eba63f;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .weekly .contain .card #day {
+    font-size: 1.2rem;
+  }
+  .weekly .contain .card h1 {
+    font-size: 1.3rem;
+    padding-right: 5px;
+  }
+  .weekly .contain .card h4 {
+    font-size: 1rem;
+    padding-right: 5px;
+  }
+  .weekly .contain .card div {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .weekly .contain .card {
+    padding: 20px 10px;
+  }
+  .weekly .contain .card #day {
+    font-size: .9rem;
+  }
+  .weekly .contain .card #day.wed {
+    font-size: .8rem;
+  }
+  .weekly .contain .card h1 {
+    font-size: 1rem;
+    padding-right: 5px;
+  }
+  .weekly .contain .card h4 {
+    font-size: .8rem;
+    padding-right: 5px;
+  }
+  .weekly .contain .card div {
+    font-size: 0.5rem;
   }
 }
 
@@ -588,7 +731,7 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 675px) {
   .hourly .contain {
     width: 100%;
     padding: 1.5%;
@@ -602,6 +745,12 @@ footer a {
   .hourly .contain .card div {
     margin: 1%;
   }
+<<<<<<< HEAD
+=======
+  .hourly .contain .card div.press {
+    margin: 0;
+  }
+>>>>>>> a14c83e10cc18d493e27f225b0ea7116391817da
   .hourly .contain .card div h1,
   .hourly .contain .card div h2,
   .hourly .contain .card div h5 {
