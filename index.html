@@ -11,29 +11,40 @@
     <link rel="icon" type="image/png" href="./images/earth.png">
     <link rel="stylesheet" href="./src/css/index.css">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
-
+    
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg py-3 bg-light">
+    <nav class="navbar navbar-expand-md py-3 bg-light doNotRemove">
         <div class="container-fluid">
-            <a href="index.html" class="navbar-brand mb-0 h1"> <img src="images/earth.png" width="10%">Fairweather</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle='collapse' data-bs-target="#navbarSuppportedContent" aria-expanded='false' aria-label="Toggle Navigation">
-                <span class='navbar-toggler-icon'> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                  </svg> </span> 
+            <div class="navbar-brand mb-0 h1">
+                <img src="images/earth.png">
+                <p>Fairweather</p>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle='collapse'
+                data-bs-target="#navbarSuppportedContent" aria-expanded='false' aria-label="Toggle Navigation">
+                <span class='navbar-toggler-icon'> <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23"
+                        fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg> </span>
             </button>
+        </div>
+        <div>
             <div class="collapse navbar-collapse" id="navbarSuppportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item ms-3">
-                        <button type="button" aria-current="" class="btn active"> Today </button>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <button type="button" aria-current="" class="btn active" id="today"> Today </button>
                     </li>
-                    <li class="nav-item ms-3">
-                        <button type="button" aria-current="" class="btn"> Hourly </button>
+                    <li class="nav-item">
+                        <button type="button" aria-current="" class="btn" id="hourly"> Hourly </button>
                     </li>
-                    <li class="nav-item ms-3">
-                        <button type="button" aria-current="" class="btn"> Weely </button>
+                    <li class="nav-item">
+                        <button type="button" aria-current="" class="btn" id="weekly"> Weekly </button>
                     </li>
             </div>
         </div>
@@ -43,44 +54,484 @@
 
 
     <!-- header (daily) -->
-    <header class="daily masthead text-white">
+    <div class="topic mt-4 today contain">
         <!-- tempurature, etc -->
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="col-xl-9 mx-auto"><h1 class="mb-5">Temperature</h1></div>
-            <div class="col-md-14 col-lg-12 col-xl-9 mx-auto"><h3 class="mb-2">Weather</h3></div>
+        <div class="container genDetails bg-white">
+            <div class="item locat">
+                <h2 id="location">Phoenix, Arizona</h3>
+            </div>
+            <div class="item time">
+                <h5 id="time">time</h5>
+            </div>
+            <div class="item temp">
+                <h1 id="temperature">Temperature</h1>
+            </div>
+            <div class="item weath">
+                <h4 id="weather">Weather</h4>
+            </div>
+            <div class="icon">
+                <img src="images/sun.png" alt="sun">
+            </div>
         </div>
         <!-- weather details -->
-        <div></div>
-    </header>
+        <div class="moreDetails container bg-white mt-3">
+                <h1 class="item" id="day">Today's Weather</h1>
+                <div class="item">
+                    <h3>Feels Like</h3>
+                    <h1 class="feelsLike">Temperature</h2>
+                </div>
+                <div class="item">
+                    <h3>Humidity</h3>
+                    <h1 class="humidity">number%</h1>
+                </div>
+                <div class="item">
+                    <h3>UV Index</h3>
+                    <h1 class="uvi">High, med, or low</h1>
+                </div>
+                <img src="images/ad.jpg" alt="inspiration" id="ad">
+        </div>
+    </div>
     <!-- header -->
 
-    
-    
+
 
     <!-- Hourly -->
-    <div class="hourly">
-        div
+    <div class="hourly topic mt-4 mb-5">
+        <div class="contain">
+            <div class="card" id="1">
+                <h2 class="time">1 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="2">
+                <h2 class="time">2 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="3">
+                <h2 class="time">3 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="4">
+                <h2 class="time">4 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="5">
+                <h2 class="time">5 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="6">
+                <h2 class="time">6 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="7">
+                <h2 class="time">7 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="8">
+                <h2 class="time">8 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="9">
+                <h2 class="time">9 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="10">
+                <h2 class="time">10 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="11">
+                <h2 class="time">11 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="12">
+                <h2 class="time">12 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="13">
+                <h2 class="time">1 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="14">
+                <h2 class="time">2 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="15">
+                <h2 class="time">3 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="16">
+                <h2 class="time">4 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="17">
+                <h2 class="time">5 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="18">
+                <h2 class="time">6 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="19">
+                <h2 class="time">7 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="20">
+                <h2 class="time">8 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="21">
+                <h2 class="time">9 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="22">
+                <h2 class="time">10 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="23">
+                <h2 class="time">11 PM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+            <div class="card" id="24">
+                <h2 class="time">12 AM</h2>
+                <h5 class="weather">Weather</h5>
+                <h1 class="temp">temp</h1>
+                <div class="hum">Humidity:<h5 class="humidity"> percent%</h5>
+                </div>
+                <div class="uvi">UV Index:<h5 class="uvi">#</h5>
+                </div>
+                <div class="press">Precipitation:<h5 class="pressure">percent%</h5>
+                </div>
+            </div>
+        </div>
     </div>
 
+
+
     <!-- Weekly -->
-    <div class="weekly"></div>
+    <div class="weekly topic mt-4">
+        <div class="contain">
+            <div class="card col-md-7" id="day1">
+                <h4 id="day">Sunday</h4>
+                <img src="images/sun.png" alt="svg" class="svg">
+                <h4 class="weath">weather</h4>
+                <h1 class="temp">Temp</h1>
+                <div id="high">
+                    <p>high:</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    <div class="maxTemp">max</div>
+                </div>
+                <div id="low">
+                    <p>low:</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                    </svg>
+                    <div class="minTemp">min</div>
+                </div>
+            </div>
+            <div class="card col-md-7" id="day2">
+                <h4 id="day">Monday</h4>
+                <img src="images/sun.png" alt="svg" class="svg">
+                <h4 class="weath">weather</h4>
+                <h1 class="temp">Temp</h1>
+                <div id="high">
+                    <p>high:</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    <div class="maxTemp">max</div>
+                </div>
+                <div id="low">
+                    <p>low:</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                    </svg>
+                    <div class="minTemp">min</div>
+                </div>
+            </div>
+            <div class="card col-md-7" id="day3">
+                <h4 id="day">Tuesday</h4>
+                <img src="images/sun.png" alt="svg" class="svg">
+                <h4 class="weath">weather</h4>
+                <h1 class="temp">Temp</h1>
+                <div id="high">
+                    <p>high:</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    <div class="maxTemp">max</div>
+                </div>
+                <div id="low">
+                    <p>low:</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                    </svg>
+                    <div class="minTemp">min</div>
+                </div>
+            </div>
+            <div class="card col-md-7" id="day4">
+                <h4 id="day" class="wed">Wednesday</h4>
+                <img src="images/sun.png" alt="svg" class="svg">
+                <h4 class="weath">weather</h4>
+                <h1 class="temp">Temp</h1>
+                <div id="high">
+                    <p>high:</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    <div class="maxTemp">max</div>
+                </div>
+                <div id="low">
+                    <p>low:</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                    </svg>
+                    <div class="minTemp">min</div>
+                </div>
+            </div>
+            <div class="card col-md-7" id="day5">
+                <h4 id="day">Thursday</h4>
+                <img src="images/sun.png" alt="svg" class="svg">
+                <h4 class="weath">weather</h4>
+                <h1 class="temp">Temp</h1>
+                <div id="high">
+                    <p>high:</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    <div class="maxTemp">max</div>
+                </div>
+                <div id="low">
+                    <p>low:</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                    </svg>
+                    <div class="minTemp">min</div>
+                </div>
+            </div>
+            <div class="card col-md-7" id="day6">
+                <h4 id="day">Friday</h4>
+                <img src="images/sun.png" alt="svg" class="svg">
+                <h4 class="weath">weather</h4>
+                <h1 class="temp">Temp</h1>
+                <div id="high">
+                    <p>high:</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    <div class="maxTemp">max</div>
+                </div>
+                <div id="low">
+                    <p>low:</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                    </svg>
+                    <div class="minTemp">min</div>
+                </div>
+            </div>
+            <div class="card col-md-7" id="day7">
+                <h4 id="day">Saturday</h4>
+                <img src="images/sun.png" alt="svg" class="svg">
+                <h4 class="weath">weather</h4>
+                <h1 class="temp">Temp</h1>
+                <div id="high">
+                    <p>high:</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    <div class="maxTemp">max</div>
+                </div>
+                <div id="low">
+                    <p>low:</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                    </svg>
+                    <div class="minTemp">min</div>
+                </div>
+            </div>
+        </div>
+        <div class="fill"></div>
+    </div>
+
+    <div class='fill doNotRemove'></div>
 
 
     <!-- footer -->
-        <footer class="footer fixed-bottom py-2 bg-light text-center"
-        <a href="#" class="navbar-brand mb-0 h1">credits</a>
+    <footer class="footer pb-0 bg-light text-center doNotRemove">
+        <p class="mb-0 mt-3 h1">&copy; Copyright Fairweather 2021</p>
+        <p>Images from  <a href="https://publicdomainvectors.org/" class="link">  Public Domain Vectors</a></p>
     </footer>
     <!-- footer -->
 
 
 
     <!-- scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <!-- scripts -->
 </body>
