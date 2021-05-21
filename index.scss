@@ -467,12 +467,20 @@ footer{
         margin-bottom: 4rem !important;
         .contain{
             flex-direction: column;
+            min-height: 100vh;
             width: 80%;
             margin: auto;
             .card{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                min-width: 100%;
                 #day{
                     margin-top: .5rem;
                     font-size: 1.5rem;
+                }
+                img{
+                    display: none;
                 }
                 width: fit-content;
                 margin: 10px auto;
