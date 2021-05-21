@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -13,7 +15,7 @@
 }
 
 body {
-  background-image: linear-gradient(#5484AD 9%, #93C7EB);
+  background-image: linear-gradient(#5484ad 9%, #93c7eb);
   background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
@@ -41,7 +43,7 @@ body {
   margin-bottom: 0;
   color: var(--darkBlue);
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
 }
 
@@ -114,7 +116,7 @@ footer a {
     font-weight: bold;
   }
   .navbar-nav {
-    margin-top: .9rem;
+    margin-top: 0.9rem;
   }
 }
 
@@ -139,7 +141,7 @@ footer a {
 }
 
 .today {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   padding-bottom: 0;
 }
 
@@ -162,7 +164,10 @@ footer a {
   padding-left: 15%;
 }
 
-.today .container.genDetails .item h1, .today .container.genDetails .item h2, .today .container.genDetails .item h4, .today .container.genDetails .item h5 {
+.today .container.genDetails .item h1,
+.today .container.genDetails .item h2,
+.today .container.genDetails .item h4,
+.today .container.genDetails .item h5 {
   margin-bottom: 0;
 }
 
@@ -263,13 +268,18 @@ footer a {
   .today .container {
     min-height: 230px;
   }
-  .today .container.genDetails .item h1, .today .container.genDetails .item h2, .today .container.genDetails .item h4, .today .container.genDetails .item h5 {
+  .today .container.genDetails .item h1,
+  .today .container.genDetails .item h2,
+  .today .container.genDetails .item h4,
+  .today .container.genDetails .item h5 {
     font-size: 1.5rem;
   }
-  .today .container.genDetails .item #location, .today .container.genDetails .item #temperature {
+  .today .container.genDetails .item #location,
+  .today .container.genDetails .item #temperature {
     font-weight: 600;
   }
-  .today .container.genDetails .item #time, .today .container.genDetails .item #weather {
+  .today .container.genDetails .item #time,
+  .today .container.genDetails .item #weather {
     font-weight: 500;
   }
   .today .container.genDetails .icon {
@@ -283,7 +293,8 @@ footer a {
   .today .container.moreDetails h1 {
     font-size: 1.5rem;
   }
-  .today .container.moreDetails .item h1, .today .container.moreDetails .item h3 {
+  .today .container.moreDetails .item h1,
+  .today .container.moreDetails .item h3 {
     font-size: 1.5rem;
   }
 }
@@ -295,7 +306,8 @@ footer a {
   .today .container.genDetails .item h4 {
     font-size: 1.2rem;
   }
-  .today .container.genDetails .item h1, .today .container.genDetails .item h2 {
+  .today .container.genDetails .item h1,
+  .today .container.genDetails .item h2 {
     font-size: 1.3rem;
   }
   .today .container.genDetails .icon img {
@@ -360,7 +372,7 @@ footer a {
 
 .weekly {
   padding-bottom: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   display: flex;
   flex-direction: column;
   height: 73vh;
@@ -373,7 +385,7 @@ footer a {
 .weekly .contain {
   display: flex;
   flex-direction: row;
-  grid-gap: .5%;
+  grid-gap: 0.5%;
   justify-content: space-between;
   width: 98%;
   margin: 0 auto;
@@ -426,6 +438,7 @@ footer a {
 @media only screen and (max-width: 768px) {
   .weekly {
     margin-bottom: 4rem !important;
+    height: fit-content;
   }
   .weekly .contain {
     flex-direction: column;
@@ -442,14 +455,14 @@ footer a {
     margin: 10px auto;
   }
   .weekly .contain .card #day {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     font-size: 1.5rem;
   }
   .weekly .contain .card img {
     display: none;
   }
   .weekly .contain .card :last-child {
-    margin-bottom: .2rem;
+    margin-bottom: 0.2rem;
   }
   .weekly .contain .card div {
     font-size: 1.2rem;
@@ -462,12 +475,14 @@ footer a {
 }
 
 .hourly {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: var(--darkBlue);
   padding-bottom: 0;
 }
 
-.hourly h1, .hourly h2, .hourly h5 {
+.hourly h1,
+.hourly h2,
+.hourly h5 {
   margin: 0;
 }
 
@@ -488,7 +503,9 @@ footer a {
   flex-wrap: wrap;
 }
 
-.hourly .contain .card h1, .hourly .contain .card h2, .hourly .contain .card h5 {
+.hourly .contain .card h1,
+.hourly .contain .card h2,
+.hourly .contain .card h5 {
   font-weight: 600;
   margin: 2%;
 }
@@ -497,12 +514,14 @@ footer a {
   margin: 2%;
 }
 
-.hourly .contain .card div h1, .hourly .contain .card div h2, .hourly .contain .card div h5 {
+.hourly .contain .card div h1,
+.hourly .contain .card div h2,
+.hourly .contain .card div h5 {
   margin: 0;
 }
 
 .hourly .contain .card h1 {
-  font-size: calc(1.375rem + .9vw);
+  font-size: calc(1.375rem + 0.9vw);
   color: var(--orangeYellow);
 }
 
@@ -539,7 +558,9 @@ footer a {
   .hourly .contain .card {
     padding: 1.6%;
   }
-  .hourly .contain .card h1, .hourly .contain .card h2, .hourly .contain .card h5 {
+  .hourly .contain .card h1,
+  .hourly .contain .card h2,
+  .hourly .contain .card h5 {
     font-size: 1.25rem;
   }
 }
@@ -549,14 +570,18 @@ footer a {
     width: 100%;
     padding: 1.5%;
   }
-  .hourly .contain .card h1, .hourly .contain .card h2, .hourly .contain .card h5 {
-    font-size: .9rem;
+  .hourly .contain .card h1,
+  .hourly .contain .card h2,
+  .hourly .contain .card h5 {
+    font-size: 0.9rem;
     margin: 1%;
   }
   .hourly .contain .card div {
     margin: 1%;
   }
-  .hourly .contain .card div h1, .hourly .contain .card div h2, .hourly .contain .card div h5 {
+  .hourly .contain .card div h1,
+  .hourly .contain .card div h2,
+  .hourly .contain .card div h5 {
     margin: 0;
   }
 }

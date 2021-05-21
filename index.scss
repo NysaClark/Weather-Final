@@ -1,11 +1,13 @@
 // Default Styles
-*, *::after, *::before{
+*,
+*::after,
+*::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --navBackground: #f8f9fa;
     --darkBlue: #0f1a3d;
     --lightBlue: #6990ca;
@@ -14,46 +16,46 @@
 }
 
 // Body Styles
-body{
+body {
     // background-image: linear-gradient(#6684AD 9%,#ADC7EB);
-    background-image: linear-gradient(#5484AD 9%,#93C7EB);
+    background-image: linear-gradient(#5484ad 9%, #93c7eb);
     background-attachment: fixed;
     background-size: cover;
     min-height: 100vh;
     // color: black;
 }
 
-.mb-5{
+.mb-5 {
     margin-bottom: 4rem !important;
 }
 
 // Nav Bar Styles
-.navbar-brand{
+.navbar-brand {
     position: sticky;
     top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 1rem;
-    img{
+    img {
         width: 80px;
         margin-right: 20px;
     }
-    p{
+    p {
         margin-bottom: 0;
         color: var(--darkBlue);
         text-transform: uppercase;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-size: 1.3rem;
     }
 }
 
 // Nav Bar Button Styles
-.btn{
+.btn {
     color: var(--darkBlue);
     margin-left: 10px;
     margin-right: 10px;
-    &:last-child{
+    &:last-child {
         margin-right: 40px;
     }
     &:focus {
@@ -61,18 +63,19 @@ body{
         box-shadow: none;
     }
 
-    &:hover, &.active{
+    &:hover,
+    &.active {
         background-color: var(--lightBlue);
         border: var(--lightBlue);
         color: white;
-        box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
+        box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
     }
-    &.active{
+    &.active {
         background-color: var(--darkBlue);
     }
 }
 
-.navbar-toggler{
+.navbar-toggler {
     &:focus {
         outline: none;
         box-shadow: none;
@@ -80,79 +83,77 @@ body{
 }
 
 // Footer Styles
-footer{
+footer {
     width: 100%;
     bottom: 0;
-    p{
+    p {
         margin: 0;
     }
-    .h1{
+    .h1 {
         color: var(--darkBlue);
         font-size: 1.1rem;
     }
-    a{
+    a {
         text-decoration: none;
         color: var(--lightBlue);
     }
 }
 
-
 // Media Rules for Navbar
-@media only screen and (max-width: 768px){
-
-    .btn{
+@media only screen and (max-width: 768px) {
+    .btn {
         background-color: var(--navBackground);
         font-size: 1.2rem;
         &:focus {
             outline: none;
             box-shadow: none;
         }
-    
-        &:hover, &.active{
+
+        &:hover,
+        &.active {
             background-color: var(--navBackground);
             border: var(--navBackground);
             color: var(--darkBlue);
             box-shadow: none;
         }
-        &.active{
+        &.active {
             font-weight: bold;
         }
     }
 
-    .navbar-nav{
-        margin-top: .9rem;
+    .navbar-nav {
+        margin-top: 0.9rem;
     }
 }
-@media only screen and (max-width: 415px){
-    .navbar-brand{
-        p{
+@media only screen and (max-width: 415px) {
+    .navbar-brand {
+        p {
             display: none;
         }
     }
 }
 
 //Media Rules for Footer
-@media only screen and (max-width: 260px){
-    footer{
-        .h1{
+@media only screen and (max-width: 260px) {
+    footer {
+        .h1 {
             font-size: 100%;
         }
-            font-size: 80%;
+        font-size: 80%;
     }
 }
 
-
 // General Page Styles
-.topic{
+.topic {
     padding-top: 1.4rem;
     padding-bottom: 5rem;
 }
 
 // Today Styles
-.today{
-    font-family: 'Raleway', sans-serif;
+.today {
+    font-family: "Raleway", sans-serif;
     padding-bottom: 0;
-    .container{
+    .container {
         color: var(--darkBlue);
         border-radius: 6px;
         padding: 20px 20px;
@@ -160,20 +161,23 @@ footer{
         width: 90%;
 
         // Top Div Styles (general details)
-        &.genDetails{
+        &.genDetails {
             display: grid;
             grid-template-columns: auto auto;
             align-content: center;
-            box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
-            
-            .item{
-                padding-left: 15%; 
-                h1, h2, h4, h5{
+            box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+
+            .item {
+                padding-left: 15%;
+                h1,
+                h2,
+                h4,
+                h5 {
                     margin-bottom: 0;
                 }
             }
 
-            .locat{
+            .locat {
                 grid-column-start: 1;
                 grid-column-end: 2;
 
@@ -181,14 +185,13 @@ footer{
                 grid-row-end: 2;
 
                 align-self: center;
-                
-                #location{
+
+                #location {
                     font-weight: 700;
                     color: var(--lightBlue);
                 }
-                
             }
-            .time{
+            .time {
                 grid-column-start: 1;
                 grid-column-end: 2;
 
@@ -197,12 +200,12 @@ footer{
 
                 align-self: center;
                 margin-bottom: 12px;
-                #time{
+                #time {
                     font-size: 1.4rem;
                     font-weight: 500;
                 }
             }
-            .temp{
+            .temp {
                 grid-column-start: 1;
                 grid-column-end: 2;
 
@@ -211,12 +214,12 @@ footer{
 
                 align-self: center;
 
-                #temperature{
+                #temperature {
                     color: var(--orangeYellow);
                     font-weight: 800;
                 }
             }
-            .weath{
+            .weath {
                 grid-column-start: 1;
                 grid-column-end: 2;
 
@@ -225,11 +228,11 @@ footer{
 
                 align-self: center;
 
-                #weather{
+                #weather {
                     font-weight: 500;
                 }
             }
-            .icon{
+            .icon {
                 grid-column-start: 2;
                 grid-column-end: 3;
 
@@ -238,10 +241,10 @@ footer{
 
                 align-self: center;
 
-                padding-right: 15%; 
+                padding-right: 15%;
                 justify-self: end;
 
-                img{
+                img {
                     max-width: 200px;
                     padding: 4%;
                 }
@@ -249,22 +252,22 @@ footer{
         }
 
         //Bottom Div Styles (more details)
-        &.moreDetails{
-            box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
+        &.moreDetails {
+            box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
             display: flex;
             flex-direction: column;
-            h1{
+            h1 {
                 font-weight: 600;
                 color: var(--orangeYellow);
             }
-            #day{
+            #day {
                 margin-bottom: 3%;
                 color: var(--lightBlue);
             }
-            .item{
+            .item {
                 padding-left: 8%;
-                margin-bottom: 2%;  
-                h3{
+                margin-bottom: 2%;
+                h3 {
                     margin-bottom: 0;
                     font-weight: 500;
                 }
@@ -275,38 +278,43 @@ footer{
 
 // Media Rules for Today Page
 @media only screen and (max-width: 768px) {
-    .today{
-        .container{
+    .today {
+        .container {
             min-height: 230px;
-            &.genDetails{
-                .item{ 
-                    h1, h2, h4, h5{
+            &.genDetails {
+                .item {
+                    h1,
+                    h2,
+                    h4,
+                    h5 {
                         font-size: 1.5rem;
                     }
-                    #location, #temperature{
+                    #location,
+                    #temperature {
                         font-weight: 600;
                     }
-                    #time, #weather{
+                    #time,
+                    #weather {
                         font-weight: 500;
                     }
                 }
-                .icon{
+                .icon {
                     padding-right: 0%;
                     justify-self: center;
-                    img{
+                    img {
                         max-width: 120px;
                         padding: 4%;
-                        
                     }
                 }
             }
 
-            &.moreDetails{
-                h1{
+            &.moreDetails {
+                h1 {
                     font-size: 1.5rem;
                 }
-                .item{ 
-                    h1, h3{
+                .item {
+                    h1,
+                    h3 {
                         font-size: 1.5rem;
                     }
                 }
@@ -315,21 +323,22 @@ footer{
     }
 }
 
-@media only screen and (max-width: 445px){
-    .today{
-        .container{
-            &.genDetails{
+@media only screen and (max-width: 445px) {
+    .today {
+        .container {
+            &.genDetails {
                 padding: 20px 5px;
-                .item{ 
-                    h4{
+                .item {
+                    h4 {
                         font-size: 1.2rem;
                     }
-                    h1, h2{
+                    h1,
+                    h2 {
                         font-size: 1.3rem;
                     }
                 }
-                .icon{
-                    img{
+                .icon {
+                    img {
                         padding-right: 10%;
                     }
                 }
@@ -338,62 +347,62 @@ footer{
     }
 }
 
-@media only screen and (max-width: 240px){
+@media only screen and (max-width: 240px) {
     .today {
-        .container{
+        .container {
             &.genDetails {
                 grid-template-columns: auto;
                 text-align: center;
-                .locat{
+                .locat {
                     align-self: center;
-                    margin-bottom: 10px;               
+                    margin-bottom: 10px;
                 }
-                .time{
+                .time {
                     align-self: center;
                     margin-bottom: 15px;
-                    #time{
+                    #time {
                         font-size: 1.4rem;
                         font-weight: 500;
                     }
                 }
-                .icon{
+                .icon {
                     grid-column-start: 1;
                     grid-column-end: 8;
-    
+
                     grid-row-start: 3;
                     grid-row-end: 3;
-                    
+
                     margin-bottom: 15px;
 
                     align-self: center;
- 
+
                     justify-self: start;
                 }
-                .temp{
+                .temp {
                     grid-row-start: 4;
                     grid-row-end: 5;
-    
+
                     align-self: center;
                     margin-bottom: 10px;
-                    #temperature{
+                    #temperature {
                         font-weight: 700;
                     }
                 }
-                .weath{  
+                .weath {
                     grid-row-start: 5;
                     grid-row-end: 6;
-                    
-                    #weather{
+
+                    #weather {
                         font-weight: 500;
                     }
                 }
             }
-            &.moreDetails{
+            &.moreDetails {
                 text-align: center;
                 padding-left: 2%;
-                .item{
+                .item {
                     padding-left: 8%;
-                    h3{
+                    h3 {
                         margin-bottom: 0;
                         font-weight: 560;
                     }
@@ -403,34 +412,33 @@ footer{
     }
 }
 
-
 // Weekly Styles
-.weekly{
+.weekly {
     padding-bottom: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     display: flex;
     flex-direction: column;
     height: 73vh;
-    .fill{
+    .fill {
         flex: 1 1 auto;
     }
-    .contain{
-        .temp{
+    .contain {
+        .temp {
             font-weight: 700;
             color: var(--orangeYellow);
         }
-        .weath{
+        .weath {
             font-weight: normal;
         }
         display: flex;
         flex-direction: row;
-        grid-gap: .5%;
+        grid-gap: 0.5%;
         justify-content: space-between;
         width: 98%;
         margin: 0 auto;
-        
-        .card{
-            #day{
+
+        .card {
+            #day {
                 font-weight: 600;
                 font-size: 1rem;
                 color: var(--lightBlue);
@@ -439,20 +447,20 @@ footer{
             align-items: center;
             justify-content: center;
             width: 13.5%;
-            box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
+            box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
             text-align: center;
-            div{
+            div {
                 font-weight: 500;
-                .maxTemp{
+                .maxTemp {
                     color: var(--orangeYellow);
-                    font-weight: 800
+                    font-weight: 800;
                 }
-                .minTemp{
+                .minTemp {
                     color: var(--orangeYellow);
-                    font-weight: 800
+                    font-weight: 800;
                 }
             }
-            img{
+            img {
                 width: 80%;
                 margin-top: 5%;
                 margin-bottom: 5%;
@@ -462,35 +470,36 @@ footer{
 }
 
 // Media Rules for Weekly Page
-@media only screen and (max-width: 768px){
-    .weekly{
+@media only screen and (max-width: 768px) {
+    .weekly {
         margin-bottom: 4rem !important;
-        .contain{
+        height: fit-content;
+        .contain {
             flex-direction: column;
             min-height: 100vh;
             width: 80%;
             margin: auto;
-            .card{
+            .card {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
                 min-width: 100%;
-                #day{
-                    margin-top: .5rem;
+                #day {
+                    margin-top: 0.5rem;
                     font-size: 1.5rem;
                 }
-                img{
+                img {
                     display: none;
                 }
                 width: fit-content;
                 margin: 10px auto;
-                :last-child{
-                    margin-bottom: .2rem;
+                :last-child {
+                    margin-bottom: 0.2rem;
                 }
-                div{
+                div {
                     font-size: 1.2rem;
                 }
-                img{
+                img {
                     margin-top: 4%;
                     margin-bottom: 4%;
                     width: 60%;
@@ -500,20 +509,21 @@ footer{
     }
 }
 
-
 // Hourly Styles
-.hourly{
-    font-family: 'Raleway', sans-serif;
+.hourly {
+    font-family: "Raleway", sans-serif;
     color: var(--darkBlue);
     padding-bottom: 0;
-    h1, h2, h5{
+    h1,
+    h2,
+    h5 {
         margin: 0;
     }
-    .contain{
+    .contain {
         width: 70%;
         margin: auto;
-        .card{
-            box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
+        .card {
+            box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
             border: var(--darkBlue) 1 solid;
             margin: 5px;
             display: flex;
@@ -523,34 +533,38 @@ footer{
             padding: 3%;
             flex-wrap: wrap;
 
-            h1, h2, h5{
+            h1,
+            h2,
+            h5 {
                 font-weight: 600;
                 margin: 2%;
             }
-            div{
+            div {
                 margin: 2%;
-                h1, h2, h5{
+                h1,
+                h2,
+                h5 {
                     margin: 0;
                 }
             }
 
-            h1{
-                font-size: calc(1.375rem + .9vw);
+            h1 {
+                font-size: calc(1.375rem + 0.9vw);
                 color: var(--orangeYellow);
             }
 
-            h2{
+            h2 {
                 color: var(--lightBlue);
             }
 
-            h5{
+            h5 {
                 font-size: 1.3rem;
             }
 
-            div{
+            div {
                 min-width: 75px;
                 text-align: center;
-                h5{
+                h5 {
                     text-align: center;
                 }
             }
@@ -558,24 +572,26 @@ footer{
     }
 }
 
-@media only screen and (max-width: 1140px){
-    .hourly{
-        .contain{
+@media only screen and (max-width: 1140px) {
+    .hourly {
+        .contain {
             width: 85%;
-            .card{
+            .card {
                 padding: 2%;
             }
         }
     }
 }
 
-@media only screen and (max-width: 870px){
-    .hourly{
-        .contain{
+@media only screen and (max-width: 870px) {
+    .hourly {
+        .contain {
             width: 95%;
-            .card{
+            .card {
                 padding: 1.6%;
-                h1, h2, h5{
+                h1,
+                h2,
+                h5 {
                     font-size: 1.25rem;
                 }
             }
@@ -583,19 +599,23 @@ footer{
     }
 }
 
-@media only screen and (max-width: 670px){
-    .hourly{
-        .contain{
+@media only screen and (max-width: 670px) {
+    .hourly {
+        .contain {
             width: 100%;
             padding: 1.5%;
-            .card{
-                h1, h2, h5{
-                    font-size: .9rem;
+            .card {
+                h1,
+                h2,
+                h5 {
+                    font-size: 0.9rem;
                     margin: 1%;
                 }
-                div{
+                div {
                     margin: 1%;
-                    h1, h2, h5{
+                    h1,
+                    h2,
+                    h5 {
                         margin: 0;
                     }
                 }
@@ -604,37 +624,37 @@ footer{
     }
 }
 
-@media only screen and (max-width: 480px){
-    .hourly{
-        .contain{
-            .card{
+@media only screen and (max-width: 480px) {
+    .hourly {
+        .contain {
+            .card {
                 display: grid;
                 text-align: center;
                 row-gap: 15%;
                 padding: 5%;
                 padding-bottom: 8.5%;
 
-                .time{
+                .time {
                     grid-column-start: 1;
                     grid-column-end: 2;
                 }
-                .weather{
+                .weather {
                     grid-column-start: 2;
                     grid-column-end: 3;
                 }
-                .temp{
+                .temp {
                     grid-column-start: 3;
                     grid-column-end: 4;
                 }
-                .hum{
+                .hum {
                     grid-column-start: 1;
                     grid-column-end: 2;
                 }
-                div.uvi{
+                div.uvi {
                     grid-column-start: 2;
                     grid-column-end: 3;
                 }
-                .press{
+                .press {
                     grid-column-start: 3;
                     grid-column-end: 4;
                 }
