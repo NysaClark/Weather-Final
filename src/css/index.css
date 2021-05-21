@@ -535,22 +535,37 @@ footer a {
     margin-bottom: 4rem !important;
   }
   .weekly .contain {
+<<<<<<< HEAD
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+=======
+    flex-direction: column;
+    min-height: 100vh;
+>>>>>>> 549b6224c490cd61e46351d07a73aadbb0ba7aa6
     width: 80%;
     margin: auto;
   }
   .weekly .contain .card {
+<<<<<<< HEAD
     width: -webkit-fit-content;
     width: -moz-fit-content;
+=======
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-width: 100%;
+>>>>>>> 549b6224c490cd61e46351d07a73aadbb0ba7aa6
     width: fit-content;
     margin: 10px auto;
   }
   .weekly .contain .card #day {
     margin-top: .5rem;
     font-size: 1.5rem;
+  }
+  .weekly .contain .card img {
+    display: none;
   }
   .weekly .contain .card :last-child {
     margin-bottom: .2rem;
