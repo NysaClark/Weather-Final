@@ -240,21 +240,27 @@ footer a {
 
 .today .container.moreDetails {
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  align-items: center;
 }
 
 .today .container.moreDetails h1 {
   font-weight: 600;
+  text-align: center;
   color: var(--orangeYellow);
 }
 
 .today .container.moreDetails #day {
+  grid-column-start: 1;
   margin-bottom: 3%;
   color: var(--lightBlue);
 }
 
 .today .container.moreDetails .item {
+  grid-column-start: 1;
   padding-left: 8%;
   margin-bottom: 2%;
 }
@@ -262,6 +268,14 @@ footer a {
 .today .container.moreDetails .item h3 {
   margin-bottom: 0;
   font-weight: 500;
+}
+
+.today .container.moreDetails #ad {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  display: initial;
+  max-width: 80%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -312,6 +326,15 @@ footer a {
   }
   .today .container.genDetails .icon img {
     padding-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 465px) {
+  .today .container.moreDetails {
+    grid-template-columns: auto;
+  }
+  .today .container.moreDetails #ad {
+    display: none;
   }
 }
 
