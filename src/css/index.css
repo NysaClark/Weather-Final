@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -14,8 +16,8 @@
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(9%, #5484AD), to(#93C7EB));
-  background-image: linear-gradient(#5484AD 9%, #93C7EB);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(9%, #5484ad), to(#93c7eb));
+  background-image: linear-gradient(#5484ad 9%, #93c7eb);
   background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
@@ -50,7 +52,7 @@ body {
   margin-bottom: 0;
   color: var(--darkBlue);
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
 }
 
@@ -128,7 +130,7 @@ footer a {
     font-weight: bold;
   }
   .navbar-nav {
-    margin-top: .9rem;
+    margin-top: 0.9rem;
   }
 }
 
@@ -153,7 +155,7 @@ footer a {
 }
 
 .today {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   padding-bottom: 0;
 }
 
@@ -180,7 +182,10 @@ footer a {
   padding-left: 15%;
 }
 
-.today .container.genDetails .item h1, .today .container.genDetails .item h2, .today .container.genDetails .item h4, .today .container.genDetails .item h5 {
+.today .container.genDetails .item h1,
+.today .container.genDetails .item h2,
+.today .container.genDetails .item h4,
+.today .container.genDetails .item h5 {
   margin-bottom: 0;
 }
 
@@ -308,13 +313,18 @@ footer a {
   .today .container {
     min-height: 230px;
   }
-  .today .container.genDetails .item h1, .today .container.genDetails .item h2, .today .container.genDetails .item h4, .today .container.genDetails .item h5 {
+  .today .container.genDetails .item h1,
+  .today .container.genDetails .item h2,
+  .today .container.genDetails .item h4,
+  .today .container.genDetails .item h5 {
     font-size: 1.5rem;
   }
-  .today .container.genDetails .item #location, .today .container.genDetails .item #temperature {
+  .today .container.genDetails .item #location,
+  .today .container.genDetails .item #temperature {
     font-weight: 600;
   }
-  .today .container.genDetails .item #time, .today .container.genDetails .item #weather {
+  .today .container.genDetails .item #time,
+  .today .container.genDetails .item #weather {
     font-weight: 500;
   }
   .today .container.genDetails .icon {
@@ -329,7 +339,8 @@ footer a {
   .today .container.moreDetails h1 {
     font-size: 1.5rem;
   }
-  .today .container.moreDetails .item h1, .today .container.moreDetails .item h3 {
+  .today .container.moreDetails .item h1,
+  .today .container.moreDetails .item h3 {
     font-size: 1.5rem;
   }
 }
@@ -341,7 +352,8 @@ footer a {
   .today .container.genDetails .item h4 {
     font-size: 1.2rem;
   }
-  .today .container.genDetails .item h1, .today .container.genDetails .item h2 {
+  .today .container.genDetails .item h1,
+  .today .container.genDetails .item h2 {
     font-size: 1.3rem;
   }
   .today .container.genDetails .icon img {
@@ -420,7 +432,7 @@ footer a {
 
 .weekly {
   padding-bottom: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -428,7 +440,6 @@ footer a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 73vh;
 }
 
 .weekly .fill {
@@ -445,7 +456,7 @@ footer a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  grid-gap: .5%;
+  grid-gap: 0.5%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -502,6 +513,21 @@ footer a {
   margin-bottom: 5%;
 }
 
+.weekly .contain .card p {
+  margin: 0;
+  padding: 0;
+}
+
+.weekly .contain .card svg {
+  display: none;
+}
+
+@media only screen and (min-width: 769px) {
+  .weekly {
+    height: 73vh;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .weekly {
     margin-bottom: 4rem !important;
@@ -511,39 +537,125 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 80%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
+    min-height: 70vh;
     margin: auto;
+    height: 100%;
   }
   .weekly .contain .card {
+    padding: 20px;
+    margin: 5px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    min-width: 100%;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    margin: 10px auto;
   }
   .weekly .contain .card #day {
-    margin-top: .5rem;
+    margin-top: 0;
     font-size: 1.5rem;
   }
-  .weekly .contain .card :last-child {
-    margin-bottom: .2rem;
+  .weekly .contain .card img {
+    display: none;
   }
   .weekly .contain .card div {
     font-size: 1.2rem;
+  }
+  .weekly .contain .card div#high, .weekly .contain .card div#low {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .weekly .contain .card img {
     margin-top: 4%;
     margin-bottom: 4%;
     width: 60%;
   }
+  .weekly .contain .card h1,
+  .weekly .contain .card h4 {
+    margin: 0;
+    padding: 0;
+  }
+  .weekly .contain .card p {
+    display: none;
+  }
+  .weekly .contain .card svg {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: block;
+    fill: #eba63f;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .weekly .contain .card #day {
+    font-size: 1.2rem;
+  }
+  .weekly .contain .card h1 {
+    font-size: 1.3rem;
+    padding-right: 5px;
+  }
+  .weekly .contain .card h4 {
+    font-size: 1rem;
+    padding-right: 5px;
+  }
+  .weekly .contain .card div {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .weekly .contain .card {
+    padding: 20px 10px;
+  }
+  .weekly .contain .card #day {
+    font-size: .9rem;
+  }
+  .weekly .contain .card #day.wed {
+    font-size: .8rem;
+  }
+  .weekly .contain .card h1 {
+    font-size: 1rem;
+    padding-right: 5px;
+  }
+  .weekly .contain .card h4 {
+    font-size: .8rem;
+    padding-right: 5px;
+  }
+  .weekly .contain .card div {
+    font-size: 0.5rem;
+  }
 }
 
 .hourly {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: var(--darkBlue);
   padding-bottom: 0;
 }
 
-.hourly h1, .hourly h2, .hourly h5 {
+.hourly h1,
+.hourly h2,
+.hourly h5 {
   margin: 0;
 }
 
@@ -575,7 +687,9 @@ footer a {
       flex-wrap: wrap;
 }
 
-.hourly .contain .card h1, .hourly .contain .card h2, .hourly .contain .card h5 {
+.hourly .contain .card h1,
+.hourly .contain .card h2,
+.hourly .contain .card h5 {
   font-weight: 600;
   margin: 2%;
 }
@@ -584,12 +698,14 @@ footer a {
   margin: 2%;
 }
 
-.hourly .contain .card div h1, .hourly .contain .card div h2, .hourly .contain .card div h5 {
+.hourly .contain .card div h1,
+.hourly .contain .card div h2,
+.hourly .contain .card div h5 {
   margin: 0;
 }
 
 .hourly .contain .card h1 {
-  font-size: calc(1.375rem + .9vw);
+  font-size: calc(1.375rem + 0.9vw);
   color: var(--orangeYellow);
 }
 
@@ -626,7 +742,9 @@ footer a {
   .hourly .contain .card {
     padding: 1.6%;
   }
-  .hourly .contain .card h1, .hourly .contain .card h2, .hourly .contain .card h5 {
+  .hourly .contain .card h1,
+  .hourly .contain .card h2,
+  .hourly .contain .card h5 {
     font-size: 1.25rem;
   }
 }
@@ -636,14 +754,18 @@ footer a {
     width: 100%;
     padding: 1.5%;
   }
-  .hourly .contain .card h1, .hourly .contain .card h2, .hourly .contain .card h5 {
-    font-size: .9rem;
+  .hourly .contain .card h1,
+  .hourly .contain .card h2,
+  .hourly .contain .card h5 {
+    font-size: 0.9rem;
     margin: 1%;
   }
   .hourly .contain .card div {
     margin: 1%;
   }
-  .hourly .contain .card div h1, .hourly .contain .card div h2, .hourly .contain .card div h5 {
+  .hourly .contain .card div h1,
+  .hourly .contain .card div h2,
+  .hourly .contain .card div h5 {
     margin: 0;
   }
 }
