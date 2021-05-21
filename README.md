@@ -23,37 +23,39 @@
 
 _________________________________________________________________________
 
+## Mock Up
+
+![mokeup](images/mockup.jpg)
+
 ## To-Do List
 
 ### Overview:
 1. Map out the landing page, hourly page and weekly page for both mobile and desktop
-2. React
-Start with landing page then move on to hourly and weekly
-When the landing page is done start styling of it
-3. Get info from json file and put it onto page
-4. Style content
+2. Start html for landing page then move on to hourly and weekly
+3. Get content from json file and put it into the HTML
+4. Style pages
 5. Write README file
 
 ### Pages:
 #### Landing Page
-- start with navbar and footer AC
-- make logo NC
-- make nav bar buttons AC
-- content for the main current weather section (ex: sunny, temp, location , & icon) SZ
-- content for the other current weather section (ex: humidity, wind, feels like, etc…) SZ
-- styling & icons NC
+- start with navbar and footer || AC 5/7
+- make logo || NC 5/7
+- make nav bar buttons || AC 5/7
+- content for the main current weather section (ex: sunny, temp, location , & icon) || SZ 5/13
+- content for the other current weather section (ex: humidity, wind, feels like, etc…) || SZ 5/13
+- styling & icons || NC 5/17
 
 #### Hourly Page
-- divs for every hour AC
-- div content SZ
-- style and add icons NC
+- divs for every hour || AC 5/12
+- div content || SZ 5/17
+- style and add icons || NC 5/18
 
 #### Weekly Page
-- divs for every day AC
-- div content SZ
-- style and add icons AC
+- divs for every day || AC 5/13
+- div content || SZ 5/17
+- style and add icons || AC 5/18
 
-#### README file SD
+#### README file || SD 5/ not done
 
 _________________________________________________________________________
 
