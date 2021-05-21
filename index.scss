@@ -19,7 +19,7 @@ body{
     background-image: linear-gradient(#5484AD 9%,#93C7EB);
     background-attachment: fixed;
     background-size: cover;
-    
+    min-height: 100vh;
     // color: black;
 }
 
@@ -81,9 +81,11 @@ body{
 
 // Footer Styles
 footer{
-    position: fixed;
     width: 100%;
     bottom: 0;
+    p{
+        margin: 0;
+    }
     .h1{
         color: var(--darkBlue);
         font-size: 1.1rem;
@@ -149,6 +151,7 @@ footer{
 // Today Styles
 .today{
     font-family: 'Raleway', sans-serif;
+    padding-bottom: 0;
     .container{
         color: var(--darkBlue);
         border-radius: 6px;
@@ -403,8 +406,14 @@ footer{
 
 // Weekly Styles
 .weekly{
-    padding-bottom: 4rem;
+    padding-bottom: 0;
     font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 73vh;
+    .fill{
+        flex: 1 1 auto;
+    }
     .contain{
         .temp{
             font-weight: 700;
@@ -487,7 +496,8 @@ footer{
 // Hourly Styles
 .hourly{
     font-family: 'Raleway', sans-serif;
-    color: var(--darkBlue)
+    color: var(--darkBlue);
+    padding-bottom: 0;
     h1, h2, h5{
         margin: 0;
     }

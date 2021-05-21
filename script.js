@@ -87,7 +87,7 @@ $(function () {
                 $(`.hourly > .contain > #${i + 1} > .temp`).text(`${Math.round(hourly[i]['temp'])} F`)
                 $(`.hourly > .contain > #${i + 1} > div > .humidity`).text(`${hourly[i]['humidity']}%`)
                 $(`.hourly > .contain > #${i + 1} > div > .uvi`).text(`${uvIndex(hourly[i]['uvi'])} (${hourly[i]['uvi']})`)
-                $(`.hourly > .contain > #${i + 1} > div > .pressure`).text(`${hourly[i]['pressure']}`)
+                $(`.hourly > .contain > #${i + 1} > div > .pressure`).text(`${hourly[i]['pop']}`)
             }
         }
 
